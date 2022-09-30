@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  enableGamepad: 0
   playerRB: {fileID: 7726312098543296438}
+  input: {fileID: 0}
 --- !u!50 &7726312098543296438
 Rigidbody2D:
   serializedVersion: 4
@@ -149,6 +151,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Movement
+  m_DefaultActionMap: PlayerOneMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}

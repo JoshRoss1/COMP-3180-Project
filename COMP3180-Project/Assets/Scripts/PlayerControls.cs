@@ -166,6 +166,89 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""KeyboardMovement"",
+            ""id"": ""e35f271f-e069-4e2c-a16a-c28775ce59d2"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""Value"",
+                    ""id"": ""07d07666-aa4f-40d1-b4a9-d9d633e2ebef"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0ffcbeb0-024d-491d-b2c1-a3bb8a588013"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""WASD"",
+                    ""id"": ""e937cc58-730c-4900-a8ab-0f00f0a7bc06"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""031b2b38-d46f-4796-a5c7-c29c67a0bbbf"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""c12abd6a-c6b3-4712-8afd-ee33a199b2a1"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""e62a46eb-011b-434a-a97f-0fa480fdd88c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""3a00c979-b7ce-4dbf-836a-f81d16e4ed90"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -176,6 +259,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // PlayerTwoMovement
         m_PlayerTwoMovement = asset.FindActionMap("PlayerTwoMovement", throwIfNotFound: true);
         m_PlayerTwoMovement_Move = m_PlayerTwoMovement.FindAction("Move", throwIfNotFound: true);
+        // KeyboardMovement
+        m_KeyboardMovement = asset.FindActionMap("KeyboardMovement", throwIfNotFound: true);
+        m_KeyboardMovement_Move = m_KeyboardMovement.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -297,11 +383,48 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         }
     }
     public PlayerTwoMovementActions @PlayerTwoMovement => new PlayerTwoMovementActions(this);
+
+    // KeyboardMovement
+    private readonly InputActionMap m_KeyboardMovement;
+    private IKeyboardMovementActions m_KeyboardMovementActionsCallbackInterface;
+    private readonly InputAction m_KeyboardMovement_Move;
+    public struct KeyboardMovementActions
+    {
+        private @PlayerControls m_Wrapper;
+        public KeyboardMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_KeyboardMovement_Move;
+        public InputActionMap Get() { return m_Wrapper.m_KeyboardMovement; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(KeyboardMovementActions set) { return set.Get(); }
+        public void SetCallbacks(IKeyboardMovementActions instance)
+        {
+            if (m_Wrapper.m_KeyboardMovementActionsCallbackInterface != null)
+            {
+                @Move.started -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_KeyboardMovementActionsCallbackInterface.OnMove;
+            }
+            m_Wrapper.m_KeyboardMovementActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+            }
+        }
+    }
+    public KeyboardMovementActions @KeyboardMovement => new KeyboardMovementActions(this);
     public interface IPlayerOneMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
     }
     public interface IPlayerTwoMovementActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+    }
+    public interface IKeyboardMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
     }

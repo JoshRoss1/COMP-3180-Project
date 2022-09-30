@@ -5,10 +5,18 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    [Header("Player Prefabs")]
+    public GameObject playerOnePrefab;
     public GameObject playerTwoPrefab;
-    private Gamepad player1;
 
-    private void Update()
+    [Header("Player Spawn Points")]
+    public GameObject playerOneSpawn;
+    public GameObject playerTwoSpawn;
+
+    private Gamepad player1;
+    private Gamepad player2;
+
+    private void Awake()
     {
         InputSystem.onDeviceChange +=
             (device, change) =>
@@ -16,20 +24,29 @@ public class PlayerManager : MonoBehaviour
                 switch (change)
                 {
                     case InputDeviceChange.Added:
-                        Debug.Log("Device Added: " + device.device.displayName);
-                        player1 = device.device as Gamepad;
+                        Debug.Log("Device Added: " + device.device.deviceId);
+                        player1 = Gamepad.all[0];
+                        player2 = Gamepad.all[1];
                         break;
                     case InputDeviceChange.Removed:
-                        Debug.Log("Device Removed: " + device.device.displayName);
+                        Debug.Log("Device Removed: " + device.device.deviceId);
                         break;
                     default: break;
                 }
             };
     }
 
-    public void UpdatePrefabForNextPlayer()
+    private void Start()
     {
-        GetComponent<PlayerInputManager>().playerPrefab = playerTwoPrefab;
-        //PlayerInput.Instantiate(playerTwoPrefab, pairWithDevice: player1);
+        PlayerInput playerOne = PlayerInput.Instantiate(playerOnePrefab, pairWithDevice: player1);
+        playerOne.transform.position = playerOneSpawn.transform.position;
+
+        PlayerInput playerTwo = PlayerInput.Instantiate(playerTwoPrefab, pairWithDevice: player2);
+        playerTwo.transform.position = playerTwoSpawn.transform.position;
+    }
+
+    private void Update()
+    {
+        
     }
 }

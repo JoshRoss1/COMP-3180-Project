@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7726312098543296426}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.01, y: 1.26, z: 0}
+  m_LocalPosition: {x: -7.176867, y: 0.11576581, z: 0.036899365}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  enableGamepad: 1
   playerRB: {fileID: 7726312098543296438}
 --- !u!50 &7726312098543296438
 Rigidbody2D:
@@ -149,6 +150,6 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 00cb9ac1-0e9c-4b3b-beb8-4ec124b5e0c5
+  m_DefaultActionMap: e35f271f-e069-4e2c-a16a-c28775ce59d2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
