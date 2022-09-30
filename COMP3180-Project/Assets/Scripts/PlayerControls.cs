@@ -24,7 +24,7 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
-            ""name"": ""Movement"",
+            ""name"": ""PlayerOneMovement"",
             ""id"": ""a4976d82-eaf0-4d69-83fc-907c9418ef07"",
             ""actions"": [
                 {
@@ -94,13 +94,88 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""PlayerTwoMovement"",
+            ""id"": ""00cb9ac1-0e9c-4b3b-beb8-4ec124b5e0c5"",
+            ""actions"": [
+                {
+                    ""name"": ""Move"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""843f2f69-b912-44bd-ad7b-ef7a814c68db"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""311145a1-aba5-41eb-8155-1b035235b6d0"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""4eec1ebb-f07d-497c-8e61-9bc1887db9a8"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b911bf8d-6570-4119-9919-fbfe5413d013"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""4aed4338-b852-4d2f-b94b-d5a88f010512"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""e3ad89ab-bb53-4c33-8d30-13c1e1c95e61"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Movement
-        m_Movement = asset.FindActionMap("Movement", throwIfNotFound: true);
-        m_Movement_Move = m_Movement.FindAction("Move", throwIfNotFound: true);
+        // PlayerOneMovement
+        m_PlayerOneMovement = asset.FindActionMap("PlayerOneMovement", throwIfNotFound: true);
+        m_PlayerOneMovement_Move = m_PlayerOneMovement.FindAction("Move", throwIfNotFound: true);
+        // PlayerTwoMovement
+        m_PlayerTwoMovement = asset.FindActionMap("PlayerTwoMovement", throwIfNotFound: true);
+        m_PlayerTwoMovement_Move = m_PlayerTwoMovement.FindAction("Move", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -157,29 +232,29 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Movement
-    private readonly InputActionMap m_Movement;
-    private IMovementActions m_MovementActionsCallbackInterface;
-    private readonly InputAction m_Movement_Move;
-    public struct MovementActions
+    // PlayerOneMovement
+    private readonly InputActionMap m_PlayerOneMovement;
+    private IPlayerOneMovementActions m_PlayerOneMovementActionsCallbackInterface;
+    private readonly InputAction m_PlayerOneMovement_Move;
+    public struct PlayerOneMovementActions
     {
         private @PlayerControls m_Wrapper;
-        public MovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Movement_Move;
-        public InputActionMap Get() { return m_Wrapper.m_Movement; }
+        public PlayerOneMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_PlayerOneMovement_Move;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerOneMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MovementActions set) { return set.Get(); }
-        public void SetCallbacks(IMovementActions instance)
+        public static implicit operator InputActionMap(PlayerOneMovementActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerOneMovementActions instance)
         {
-            if (m_Wrapper.m_MovementActionsCallbackInterface != null)
+            if (m_Wrapper.m_PlayerOneMovementActionsCallbackInterface != null)
             {
-                @Move.started -= m_Wrapper.m_MovementActionsCallbackInterface.OnMove;
-                @Move.performed -= m_Wrapper.m_MovementActionsCallbackInterface.OnMove;
-                @Move.canceled -= m_Wrapper.m_MovementActionsCallbackInterface.OnMove;
+                @Move.started -= m_Wrapper.m_PlayerOneMovementActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayerOneMovementActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayerOneMovementActionsCallbackInterface.OnMove;
             }
-            m_Wrapper.m_MovementActionsCallbackInterface = instance;
+            m_Wrapper.m_PlayerOneMovementActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @Move.started += instance.OnMove;
@@ -188,8 +263,45 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
             }
         }
     }
-    public MovementActions @Movement => new MovementActions(this);
-    public interface IMovementActions
+    public PlayerOneMovementActions @PlayerOneMovement => new PlayerOneMovementActions(this);
+
+    // PlayerTwoMovement
+    private readonly InputActionMap m_PlayerTwoMovement;
+    private IPlayerTwoMovementActions m_PlayerTwoMovementActionsCallbackInterface;
+    private readonly InputAction m_PlayerTwoMovement_Move;
+    public struct PlayerTwoMovementActions
+    {
+        private @PlayerControls m_Wrapper;
+        public PlayerTwoMovementActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Move => m_Wrapper.m_PlayerTwoMovement_Move;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerTwoMovement; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerTwoMovementActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerTwoMovementActions instance)
+        {
+            if (m_Wrapper.m_PlayerTwoMovementActionsCallbackInterface != null)
+            {
+                @Move.started -= m_Wrapper.m_PlayerTwoMovementActionsCallbackInterface.OnMove;
+                @Move.performed -= m_Wrapper.m_PlayerTwoMovementActionsCallbackInterface.OnMove;
+                @Move.canceled -= m_Wrapper.m_PlayerTwoMovementActionsCallbackInterface.OnMove;
+            }
+            m_Wrapper.m_PlayerTwoMovementActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Move.started += instance.OnMove;
+                @Move.performed += instance.OnMove;
+                @Move.canceled += instance.OnMove;
+            }
+        }
+    }
+    public PlayerTwoMovementActions @PlayerTwoMovement => new PlayerTwoMovementActions(this);
+    public interface IPlayerOneMovementActions
+    {
+        void OnMove(InputAction.CallbackContext context);
+    }
+    public interface IPlayerTwoMovementActions
     {
         void OnMove(InputAction.CallbackContext context);
     }
