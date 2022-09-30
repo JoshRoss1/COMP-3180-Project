@@ -30,6 +30,6 @@ public class PlayerManager : MonoBehaviour
     public void UpdatePrefabForNextPlayer()
     {
         GetComponent<PlayerInputManager>().playerPrefab = playerTwoPrefab;
-        PlayerInput.Instantiate(playerTwoPrefab, pairWithDevice: player1);
+        //PlayerInput.Instantiate(playerTwoPrefab, pairWithDevice: player1);
     }
 }
