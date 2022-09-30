@@ -1,0 +1,966 @@
+fileFormatVersion: 2
+guid: 49d6dad81b9a7ee4abcf54d7008d4030
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMasterTextureLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: rocket launcher
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 3743
+      width: 1055
+      height: 455
+    spriteID: 10ba99c56d787f546ac50afa16a78ebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1460, y: 2497}
+  - name: flamethrower
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 1597
+      width: 1278
+      height: 490
+    spriteID: 437246b72144d8a4fb69703251707b41
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2897, y: 422}
+  - name: electric gun
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 4206
+      width: 1102
+      height: 428
+    spriteID: 8aa6e462b70a2a1429486709e61d75f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2813, y: 3631}
+  - name: knife
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7534
+      y: 1822
+      width: 625
+      height: 130
+    spriteID: 1da8aad1a9b80224ea72f2c5425bd354
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4154, y: 1607}
+  - name: plazma grenade
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7602
+      y: 4642
+      width: 184
+      height: 286
+    spriteID: 734a586d26dd22a48ba605a0a9f34c53
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6747, y: 3283}
+  - name: electric grenade
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7403
+      y: 4642
+      width: 191
+      height: 281
+    spriteID: 0b3342225b8cd074280d20a04450813e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7064, y: 3283}
+  - name: flame grenade
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7878
+      y: 4999
+      width: 193
+      height: 306
+    spriteID: 0b7144b47aad9074fb6612e689f28aec
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7282, y: 3640}
+  - name: explosive grenafde
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7794
+      y: 4642
+      width: 182
+      height: 283
+    spriteID: 797f88712b8c23b499bd52d0d7f02b06
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6689, y: 3283}
+  - name: shotgun lazer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7321
+      y: 4
+      width: 833
+      height: 272
+    spriteID: a7a5c8c63a13e6b40b92a6c28d7a8c9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5406, y: -2284}
+  - name: pistol lazer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 4
+      width: 1065
+      height: 1585
+    spriteID: af6174a0868b8054f8c82a78d5672b89
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5909, y: -971}
+  - name: assault laser
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7311
+      y: 3743
+      width: 834
+      height: 351
+    spriteID: 64ed32d69a6f93d448277f72eac37c1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6389, y: 1491}
+  - name: sniper lazer
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5582
+      width: 1128
+      height: 332
+    spriteID: a333de30036c6eb4bbdb641c73847f44
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -335, y: 3736}
+  - name: Layer 103
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 2793
+      width: 1126
+      height: 477
+    spriteID: 73599c03dbad7aa489a884bb4e3b86c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4626, y: 993}
+  - name: mg-plazma
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 2095
+      width: 1180
+      height: 475
+    spriteID: bafb0b10d1028f04cbeddbe5b48775f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1529, y: 249}
+  - name: assault plazma
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7358
+      y: 4206
+      width: 821
+      height: 343
+    spriteID: 5d4e0a33fc8eb1d43b50ac9a997bf694
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3304, y: 1918}
+  - name: pistol plazma
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7534
+      y: 1597
+      width: 385
+      height: 217
+    spriteID: bf3b3718d31b8b143a78dd22c8101ee9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4192, y: -758}
+  - name: sniper plazma
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 4999
+      width: 1237
+      height: 311
+    spriteID: b1f8ca6c645804140b384b33b5cc59eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2982, y: 3127}
+  - name: shotgun plazma
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7377
+      y: 3278
+      width: 791
+      height: 270
+    spriteID: fb5db47f6a444f445a2233caec6b89d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2269, y: 976}
+  - name: pistol
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 7493
+      y: 4999
+      width: 377
+      height: 240
+    spriteID: 56f3a82b8024e004ebc1925c922245c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 7239, y: 4156}
+  - name: shotgun
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1140
+      y: 5582
+      width: 885
+      height: 276
+    spriteID: 8b7d7b555122d4947b34ea543211047d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -770, y: 4758}
+  - name: assault
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5922
+      width: 921
+      height: 362
+    spriteID: 9c846404984292e48b4aa0a659aaa974
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -877, y: 5121}
+  - name: sniper
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 4642
+      width: 1147
+      height: 349
+    spriteID: b938596cfcd42864f888284f039f817c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 6033, y: 4383}
+  - name: machine gun
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 6248
+      y: 3278
+      width: 1121
+      height: 457
+    spriteID: 87fd8664130869146884d9ac194b757e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4624, y: 3045}
+  - name: bg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 6236
+      height: 2781
+    spriteID: a8cabdebd9c618e45b2ad45c34403079
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Layer 6
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2793
+      width: 6236
+      height: 2781
+    spriteID: 236dcf95d346953459904dcf5033cc49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2793}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  sharedRigSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  skeletonAssetReferenceID: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: special
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 1771
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: rocket launcher
+    spriteName: rocket launcher
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 10ba99c56d787f546ac50afa16a78ebc
+    layerID: 1422
+    mosaicPosition: {x: 6248, y: 3743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: flamethrower
+    spriteName: flamethrower
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 437246b72144d8a4fb69703251707b41
+    layerID: 1322
+    mosaicPosition: {x: 6248, y: 1597}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: electric gun
+    spriteName: electric gun
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 8aa6e462b70a2a1429486709e61d75f5
+    layerID: 1674
+    mosaicPosition: {x: 6248, y: 4206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: knife
+    spriteName: knife
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1da8aad1a9b80224ea72f2c5425bd354
+    layerID: 1730
+    mosaicPosition: {x: 7534, y: 1822}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: grenades
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 1773
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: plazma grenade
+    spriteName: plazma grenade
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 734a586d26dd22a48ba605a0a9f34c53
+    layerID: 1535
+    mosaicPosition: {x: 7602, y: 4642}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: electric grenade
+    spriteName: electric grenade
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 0b3342225b8cd074280d20a04450813e
+    layerID: 1534
+    mosaicPosition: {x: 7403, y: 4642}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: flame grenade
+    spriteName: flame grenade
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 0b7144b47aad9074fb6612e689f28aec
+    layerID: 1533
+    mosaicPosition: {x: 7878, y: 4999}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: explosive grenafde
+    spriteName: explosive grenafde
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 797f88712b8c23b499bd52d0d7f02b06
+    layerID: 1532
+    mosaicPosition: {x: 7794, y: 4642}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: lazer
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 874
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: shotgun lazer
+    spriteName: shotgun lazer
+    isGroup: 0
+    parentIndex: 10
+    spriteID: a7a5c8c63a13e6b40b92a6c28d7a8c9e
+    layerID: 1835
+    mosaicPosition: {x: 7321, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pistol lazer
+    spriteName: pistol lazer
+    isGroup: 0
+    parentIndex: 10
+    spriteID: af6174a0868b8054f8c82a78d5672b89
+    layerID: 1831
+    mosaicPosition: {x: 6248, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: assault laser
+    spriteName: assault laser
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 64ed32d69a6f93d448277f72eac37c1c
+    layerID: 1832
+    mosaicPosition: {x: 7311, y: 3743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sniper lazer
+    spriteName: sniper lazer
+    isGroup: 0
+    parentIndex: 10
+    spriteID: a333de30036c6eb4bbdb641c73847f44
+    layerID: 1833
+    mosaicPosition: {x: 4, y: 5582}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 103
+    spriteName: Layer 103
+    isGroup: 0
+    parentIndex: 10
+    spriteID: 73599c03dbad7aa489a884bb4e3b86c3
+    layerID: 1834
+    mosaicPosition: {x: 6248, y: 2793}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: plazma
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 1034
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: mg-plazma
+    spriteName: mg-plazma
+    isGroup: 0
+    parentIndex: 16
+    spriteID: bafb0b10d1028f04cbeddbe5b48775f8
+    layerID: 1231
+    mosaicPosition: {x: 6248, y: 2095}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: assault plazma
+    spriteName: assault plazma
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 5d4e0a33fc8eb1d43b50ac9a997bf694
+    layerID: 1032
+    mosaicPosition: {x: 7358, y: 4206}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: pistol plazma
+    spriteName: pistol plazma
+    isGroup: 0
+    parentIndex: 16
+    spriteID: bf3b3718d31b8b143a78dd22c8101ee9
+    layerID: 1033
+    mosaicPosition: {x: 7534, y: 1597}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sniper plazma
+    spriteName: sniper plazma
+    isGroup: 0
+    parentIndex: 16
+    spriteID: b1f8ca6c645804140b384b33b5cc59eb
+    layerID: 1125
+    mosaicPosition: {x: 6248, y: 4999}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: shotgun plazma
+    spriteName: shotgun plazma
+    isGroup: 0
+    parentIndex: 16
+    spriteID: fb5db47f6a444f445a2233caec6b89d3
+    layerID: 1167
+    mosaicPosition: {x: 7377, y: 3278}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bullet
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 1769
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: pistol
+    spriteName: pistol
+    isGroup: 0
+    parentIndex: 22
+    spriteID: 56f3a82b8024e004ebc1925c922245c1
+    layerID: 1749
+    mosaicPosition: {x: 7493, y: 4999}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: shotgun
+    spriteName: shotgun
+    isGroup: 0
+    parentIndex: 22
+    spriteID: 8b7d7b555122d4947b34ea543211047d
+    layerID: 1748
+    mosaicPosition: {x: 1140, y: 5582}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: assault
+    spriteName: assault
+    isGroup: 0
+    parentIndex: 22
+    spriteID: 9c846404984292e48b4aa0a659aaa974
+    layerID: 1747
+    mosaicPosition: {x: 4, y: 5922}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sniper
+    spriteName: sniper
+    isGroup: 0
+    parentIndex: 22
+    spriteID: b938596cfcd42864f888284f039f817c
+    layerID: 1746
+    mosaicPosition: {x: 6248, y: 4642}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: machine gun
+    spriteName: machine gun
+    isGroup: 0
+    parentIndex: 22
+    spriteID: 87fd8664130869146884d9ac194b757e
+    layerID: 1745
+    mosaicPosition: {x: 6248, y: 3278}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: bg
+    spriteName: bg
+    isGroup: 0
+    parentIndex: -1
+    spriteID: a8cabdebd9c618e45b2ad45c34403079
+    layerID: 1811
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 6
+    spriteName: Layer 6
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 236dcf95d346953459904dcf5033cc49
+    layerID: 10
+    mosaicPosition: {x: 4, y: 2793}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: Layer 4
+    spriteName: 
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 8
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 0
+  sharedRigPSDLayers: []
+  pSDLayerImportSetting: []
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []
