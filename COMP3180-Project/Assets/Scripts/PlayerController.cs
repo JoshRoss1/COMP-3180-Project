@@ -8,23 +8,37 @@ public class PlayerController : MonoBehaviour
     //Movement Variables
     public float moveSpeed = 1f;
 
-    //Testing
-
+    [Tooltip("Enable to turn on GamePad controls. Disable for K&M")]
+    [Header("Gamepad or Keyboard and Mouse?")]
+    public bool enableGamepad = false;
 
     //Component References
     public Rigidbody2D playerRB;
 
     //Input Actions References
-    private PlayerControls playerControls;
+    private PlayerControls gamepadControls;
+    private PlayerControls keyboardControls;
     private Vector2 move;
 
     private void Awake()
     {
-        playerControls = new PlayerControls();
+        gamepadControls = new PlayerControls();
+        keyboardControls = new PlayerControls();
 
+        if (enableGamepad)
+        {
+            gamepadControls.PlayerOneMovement.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
+            gamepadControls.PlayerOneMovement.Move.canceled += ctx => move = Vector2.zero;
+        }
 
-        playerControls.PlayerOneMovement.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
-        playerControls.PlayerOneMovement.Move.canceled += ctx => move = Vector2.zero;
+        if (!enableGamepad)
+        {
+            keyboardControls.KeyboardMovement.Move.performed += ctx => move = ctx.ReadValue<Vector2>();
+            keyboardControls.KeyboardMovement.Move.canceled += ctx => move = Vector2.zero;
+        }
+        
+
+        
 
 
 
@@ -32,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(InputSystem.devices.ToArray());
+
     }
 
     private void FixedUpdate()
@@ -49,12 +63,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnEnable()
     {
-        playerControls.Enable();
+        gamepadControls.Enable();
+        keyboardControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.Disable();
+        gamepadControls.Disable();
+        keyboardControls.Disable();
     }
 
 }
