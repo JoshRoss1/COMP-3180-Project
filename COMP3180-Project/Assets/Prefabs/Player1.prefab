@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7726312098543296424}
   - component: {fileID: 7726312098543296427}
-  - component: {fileID: 7726312098543296425}
   - component: {fileID: 7726312098543296438}
   - component: {fileID: -5832494340136602099}
+  - component: {fileID: 3662038300846657668}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -87,22 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7726312098543296425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7726312098543296426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb099c5e10718d74abf6204732498020, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  enableGamepad: 0
-  playerRB: {fileID: 7726312098543296438}
-  input: {fileID: 0}
 --- !u!50 &7726312098543296438
 Rigidbody2D:
   serializedVersion: 4
@@ -148,9 +132,33 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 90adccc0-25e3-44c4-b7a0-e7cdbcdd3e33
+    m_ActionName: PlayerOneMovement/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows1/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows1/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows1/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows1/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 843f2f69-b912-44bd-ad7b-ef7a814c68db
+    m_ActionName: PlayerTwoMovement/Move[/XInputControllerWindows/leftStick/up,/XInputControllerWindows1/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows1/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows1/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows1/leftStick/right]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 07d07666-aa4f-40d1-b4a9-d9d633e2ebef
+    m_ActionName: KeyboardMovement/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: PlayerOneMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &3662038300846657668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7726312098543296426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc1c76d8581742478d19d6abe6be98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
