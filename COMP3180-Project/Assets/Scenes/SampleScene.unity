@@ -477,5 +477,9 @@ PrefabInstance:
       propertyPath: playerTwoSpawn
       value: 
       objectReference: {fileID: 2115091563}
+    - target: {fileID: 9204064685868613980, guid: 4c918cf2c78fe124aa3498d61feae66b, type: 3}
+      propertyPath: playerOnePrefab
+      value: 
+      objectReference: {fileID: 7726312098543296426, guid: 027cc90bd5036114fba58dc933e6f2b1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c918cf2c78fe124aa3498d61feae66b, type: 3}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerGeneral : MonoBehaviour
 {
     public float health = 100f;
+    public float greenDropRate = 10f;
 
 
     // Start is called before the first frame update

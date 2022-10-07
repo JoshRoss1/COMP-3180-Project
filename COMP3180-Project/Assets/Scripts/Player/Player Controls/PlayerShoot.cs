@@ -14,6 +14,7 @@ public class PlayerShoot : MonoBehaviour
 
     //Aim Direction
     public float offset = 1f;
+    public GameObject pivotPoint;
     private Vector2 direction;
 
     private void Awake()
@@ -35,11 +36,7 @@ public class PlayerShoot : MonoBehaviour
     {
         Vector2 dirNormalised = direction.normalized;
 
-        if(playerManager.GetComponent<PlayerDetails>().playerID == 1)
-        {
-            Debug.Log("Player 1 Shot");
-        }
-
+        //Spawning Bullet
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         float speed = bullet.GetComponent<Bullet>().speed;
         bullet.GetComponent<Rigidbody2D>().AddForce(dirNormalised * speed, ForceMode2D.Impulse);

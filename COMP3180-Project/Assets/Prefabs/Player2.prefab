@@ -97,7 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c06116a77e5484681aa1bee9b4f52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerManager: {fileID: 9204064685868613952, guid: 4c918cf2c78fe124aa3498d61feae66b, type: 3}
   bulletPrefab: {fileID: 8792831310057691133, guid: 5e6dfca1fc562124a9dafba4808be52b, type: 3}
+  offset: 1
 --- !u!1 &7726312098543296426
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,8 +112,8 @@ GameObject:
   - component: {fileID: 7726312098543296427}
   - component: {fileID: 7726312098543296438}
   - component: {fileID: -5832494340136602099}
-  - component: {fileID: -9118930501522854381}
   - component: {fileID: 4224055371418633482}
+  - component: {fileID: -9118930501522854381}
   - component: {fileID: -7232853637685785931}
   m_Layer: 0
   m_Name: Player2
@@ -239,18 +241,6 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerOneMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &-9118930501522854381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7726312098543296426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc1c76d8581742478d19d6abe6be98b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &4224055371418633482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +253,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc7f4a9d847fcb547a944151cc06a94e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 50
+  greenDropRate: 10
+--- !u!114 &-9118930501522854381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7726312098543296426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc1c76d8581742478d19d6abe6be98b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &-7232853637685785931
 BoxCollider2D:
   m_ObjectHideFlags: 0
