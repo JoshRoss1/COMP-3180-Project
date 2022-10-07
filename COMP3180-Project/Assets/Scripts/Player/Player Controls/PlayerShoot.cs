@@ -29,6 +29,9 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        
+
         DirectionalAim();
     }
 
@@ -43,7 +46,9 @@ public class PlayerShoot : MonoBehaviour
     }
 
     private void DirectionalAim()
-    { 
+    {
+        direction = new Vector2(direction.x - pivotPoint.transform.localPosition.x, direction.y - pivotPoint.transform.localPosition.y);
+
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 80 * Time.deltaTime);
