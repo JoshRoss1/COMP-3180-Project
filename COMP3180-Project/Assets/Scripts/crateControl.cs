@@ -5,6 +5,17 @@ using UnityEngine.InputSystem;
 
 public class crateControl : MonoBehaviour
 {
+
+    //Drop logic
+    public List<GameObject> drops;
+
+    public GameObject playerOne;
+    private Player1LootDrops playerOneLoot;
+
+    public int playerOneTotal;
+    public int playerOneRandomNumber;
+
+    //Change sprite to animate opening crate.
     [SerializeField]
     private SpriteRenderer spriteRenderer;
 
@@ -23,6 +34,8 @@ public class crateControl : MonoBehaviour
     void Start()
     {
         spriteRenderer.sprite = closedSprite;
+
+        playerOneLoot = playerOne.GetComponent<Player1LootDrops>();
     }
 
     void Update()
@@ -32,12 +45,46 @@ public class crateControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player1"))
         {
             if (playerControls.actions["Interact"].triggered)
             {
                 spriteRenderer.sprite = openSprite;
                 isOpen = true;
+                PlayerOneDrop();
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Player2"))
+        {
+            if (playerControls.actions["Interact"].triggered)
+            {
+                spriteRenderer.sprite = openSprite;
+                isOpen = true;
+                //PlayerTwoDrop();
+            }
+        }
+    }
+
+    private void PlayerOneDrop()
+    {
+        foreach (var item in playerOneLoot.lootTable)
+        {
+            playerOneTotal += item;
+        }
+
+        playerOneRandomNumber = Random.Range(0, playerOneTotal);
+
+        for (int i = 0; i < playerOneLoot.lootTable.Length; i++)
+        {
+            if (playerOneRandomNumber <= playerOneLoot.lootTable[i])
+            {
+                //instantiate corresponding GameObject here.
+                return;
+            }
+            else
+            {
+                playerOneRandomNumber -= playerOneLoot.lootTable[i];
             }
         }
     }
