@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
+
+    [SerializeField]
+    float moveSpeed = 0f;
+
+    private Vector2 moveDirection;
+
     // Start is called before the first frame update
     void Start()
     {
