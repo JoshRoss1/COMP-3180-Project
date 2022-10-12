@@ -102,7 +102,7 @@ ScriptedImporter:
       y: 3743
       width: 1055
       height: 455
-    spriteID: 10ba99c56d787f546ac50afa16a78ebc
+    spriteID: feb129c6d73b8d043bd586a3888059a9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -123,7 +123,7 @@ ScriptedImporter:
       y: 1597
       width: 1278
       height: 490
-    spriteID: 437246b72144d8a4fb69703251707b41
+    spriteID: daf6c1c2afea8cb43b849de02a564ce4
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,7 +144,7 @@ ScriptedImporter:
       y: 4206
       width: 1102
       height: 428
-    spriteID: 8aa6e462b70a2a1429486709e61d75f5
+    spriteID: d4376691066934947855c7c700e61731
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -165,7 +165,7 @@ ScriptedImporter:
       y: 1822
       width: 625
       height: 130
-    spriteID: 1da8aad1a9b80224ea72f2c5425bd354
+    spriteID: 544713a19f2877840995262e32db6767
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -186,7 +186,7 @@ ScriptedImporter:
       y: 4642
       width: 184
       height: 286
-    spriteID: 734a586d26dd22a48ba605a0a9f34c53
+    spriteID: ee0726e856e8b4c44a19633fdf1f4762
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -207,7 +207,7 @@ ScriptedImporter:
       y: 4642
       width: 191
       height: 281
-    spriteID: 0b3342225b8cd074280d20a04450813e
+    spriteID: e2dc71c373106d743bda3123db6e3e65
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -228,7 +228,7 @@ ScriptedImporter:
       y: 4999
       width: 193
       height: 306
-    spriteID: 0b7144b47aad9074fb6612e689f28aec
+    spriteID: 96fb4aba1c00cf843aed024a83a80a44
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -249,7 +249,7 @@ ScriptedImporter:
       y: 4642
       width: 182
       height: 283
-    spriteID: 797f88712b8c23b499bd52d0d7f02b06
+    spriteID: 8f6de19e3b6a0a541957dafb689ab832
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -270,7 +270,7 @@ ScriptedImporter:
       y: 4
       width: 833
       height: 272
-    spriteID: a7a5c8c63a13e6b40b92a6c28d7a8c9e
+    spriteID: b8dc56a0e1cf7c041ad2eab617cb43be
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -291,7 +291,7 @@ ScriptedImporter:
       y: 4
       width: 1065
       height: 1585
-    spriteID: af6174a0868b8054f8c82a78d5672b89
+    spriteID: 2e86a29fa589882478d2ca9e71195f03
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -312,7 +312,7 @@ ScriptedImporter:
       y: 3743
       width: 834
       height: 351
-    spriteID: 64ed32d69a6f93d448277f72eac37c1c
+    spriteID: 0f22ada48f29c4743bffc109d69e5119
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -333,7 +333,7 @@ ScriptedImporter:
       y: 5582
       width: 1128
       height: 332
-    spriteID: a333de30036c6eb4bbdb641c73847f44
+    spriteID: d6cffe252a6287e4e833938411aecd90
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -354,7 +354,7 @@ ScriptedImporter:
       y: 2793
       width: 1126
       height: 477
-    spriteID: 73599c03dbad7aa489a884bb4e3b86c3
+    spriteID: ea1fbe0109f215f42b0562a627b12ab1
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -375,7 +375,7 @@ ScriptedImporter:
       y: 2095
       width: 1180
       height: 475
-    spriteID: bafb0b10d1028f04cbeddbe5b48775f8
+    spriteID: 5a126a995fe65054a953d45e55cd9913
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -396,7 +396,7 @@ ScriptedImporter:
       y: 4206
       width: 821
       height: 343
-    spriteID: 5d4e0a33fc8eb1d43b50ac9a997bf694
+    spriteID: f3395041c96bdda43a52413e59896541
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -417,7 +417,7 @@ ScriptedImporter:
       y: 1597
       width: 385
       height: 217
-    spriteID: bf3b3718d31b8b143a78dd22c8101ee9
+    spriteID: 67b14d3c616f229408ecfcd5aa9e450c
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -438,7 +438,7 @@ ScriptedImporter:
       y: 4999
       width: 1237
       height: 311
-    spriteID: b1f8ca6c645804140b384b33b5cc59eb
+    spriteID: 039229f75e61d6147b2fb1b349742a2e
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -459,7 +459,7 @@ ScriptedImporter:
       y: 3278
       width: 791
       height: 270
-    spriteID: fb5db47f6a444f445a2233caec6b89d3
+    spriteID: 3a9860fb1209e83418e3ed3f246842bc
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -471,8 +471,8 @@ ScriptedImporter:
     uvTransform: {x: 2269, y: 976}
   - name: pistol
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: -0.5, y: 0.5}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -480,7 +480,7 @@ ScriptedImporter:
       y: 4999
       width: 377
       height: 240
-    spriteID: 56f3a82b8024e004ebc1925c922245c1
+    spriteID: cab800cf20a960146ace3dae50bf5fc9
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -501,7 +501,7 @@ ScriptedImporter:
       y: 5582
       width: 885
       height: 276
-    spriteID: 8b7d7b555122d4947b34ea543211047d
+    spriteID: a1abc647a7627c248b1e94faae0b430f
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -522,7 +522,7 @@ ScriptedImporter:
       y: 5922
       width: 921
       height: 362
-    spriteID: 9c846404984292e48b4aa0a659aaa974
+    spriteID: 20fb51ccb1e718a4c9eb59338af1bb70
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -543,7 +543,7 @@ ScriptedImporter:
       y: 4642
       width: 1147
       height: 349
-    spriteID: b938596cfcd42864f888284f039f817c
+    spriteID: ac412b2526cc09349a84dc7e9f98a8a5
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -564,7 +564,7 @@ ScriptedImporter:
       y: 3278
       width: 1121
       height: 457
-    spriteID: 87fd8664130869146884d9ac194b757e
+    spriteID: f2b4bdd710e7eb9498e2702535afa480
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -585,7 +585,7 @@ ScriptedImporter:
       y: 4
       width: 6236
       height: 2781
-    spriteID: a8cabdebd9c618e45b2ad45c34403079
+    spriteID: 367d04111c528d647befe4389326fa8d
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -606,7 +606,7 @@ ScriptedImporter:
       y: 2793
       width: 6236
       height: 2781
-    spriteID: 236dcf95d346953459904dcf5033cc49
+    spriteID: 601de21d3a90df34f9a29e5aa94353dd
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -650,7 +650,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 0bb9b547b92861a44836e6c0ffe6ad49
+    spriteID: 8a5783c341db07d409403583f62fbe1a
     layerID: 1771
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -660,7 +660,7 @@ ScriptedImporter:
     spriteName: rocket launcher
     isGroup: 0
     parentIndex: 0
-    spriteID: 10ba99c56d787f546ac50afa16a78ebc
+    spriteID: feb129c6d73b8d043bd586a3888059a9
     layerID: 1422
     mosaicPosition: {x: 6248, y: 3743}
     flatten: 0
@@ -670,7 +670,7 @@ ScriptedImporter:
     spriteName: flamethrower
     isGroup: 0
     parentIndex: 0
-    spriteID: 437246b72144d8a4fb69703251707b41
+    spriteID: daf6c1c2afea8cb43b849de02a564ce4
     layerID: 1322
     mosaicPosition: {x: 6248, y: 1597}
     flatten: 0
@@ -680,7 +680,7 @@ ScriptedImporter:
     spriteName: electric gun
     isGroup: 0
     parentIndex: 0
-    spriteID: 8aa6e462b70a2a1429486709e61d75f5
+    spriteID: d4376691066934947855c7c700e61731
     layerID: 1674
     mosaicPosition: {x: 6248, y: 4206}
     flatten: 0
@@ -690,7 +690,7 @@ ScriptedImporter:
     spriteName: knife
     isGroup: 0
     parentIndex: 0
-    spriteID: 1da8aad1a9b80224ea72f2c5425bd354
+    spriteID: 544713a19f2877840995262e32db6767
     layerID: 1730
     mosaicPosition: {x: 7534, y: 1822}
     flatten: 0
@@ -700,7 +700,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: b4b3ca7c87a2fe447a02f238f5bfc6f6
+    spriteID: 51ed8327052806c49a5c05a9f895aaf5
     layerID: 1773
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -710,7 +710,7 @@ ScriptedImporter:
     spriteName: plazma grenade
     isGroup: 0
     parentIndex: 5
-    spriteID: 734a586d26dd22a48ba605a0a9f34c53
+    spriteID: ee0726e856e8b4c44a19633fdf1f4762
     layerID: 1535
     mosaicPosition: {x: 7602, y: 4642}
     flatten: 0
@@ -720,7 +720,7 @@ ScriptedImporter:
     spriteName: electric grenade
     isGroup: 0
     parentIndex: 5
-    spriteID: 0b3342225b8cd074280d20a04450813e
+    spriteID: e2dc71c373106d743bda3123db6e3e65
     layerID: 1534
     mosaicPosition: {x: 7403, y: 4642}
     flatten: 0
@@ -730,7 +730,7 @@ ScriptedImporter:
     spriteName: flame grenade
     isGroup: 0
     parentIndex: 5
-    spriteID: 0b7144b47aad9074fb6612e689f28aec
+    spriteID: 96fb4aba1c00cf843aed024a83a80a44
     layerID: 1533
     mosaicPosition: {x: 7878, y: 4999}
     flatten: 0
@@ -740,7 +740,7 @@ ScriptedImporter:
     spriteName: explosive grenafde
     isGroup: 0
     parentIndex: 5
-    spriteID: 797f88712b8c23b499bd52d0d7f02b06
+    spriteID: 8f6de19e3b6a0a541957dafb689ab832
     layerID: 1532
     mosaicPosition: {x: 7794, y: 4642}
     flatten: 0
@@ -750,7 +750,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 1e53f6228b90d1f4bab814fc9580cc05
+    spriteID: f06779d92507d1d469b8b5e432c94f44
     layerID: 874
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -760,7 +760,7 @@ ScriptedImporter:
     spriteName: shotgun lazer
     isGroup: 0
     parentIndex: 10
-    spriteID: a7a5c8c63a13e6b40b92a6c28d7a8c9e
+    spriteID: b8dc56a0e1cf7c041ad2eab617cb43be
     layerID: 1835
     mosaicPosition: {x: 7321, y: 4}
     flatten: 0
@@ -770,7 +770,7 @@ ScriptedImporter:
     spriteName: pistol lazer
     isGroup: 0
     parentIndex: 10
-    spriteID: af6174a0868b8054f8c82a78d5672b89
+    spriteID: 2e86a29fa589882478d2ca9e71195f03
     layerID: 1831
     mosaicPosition: {x: 6248, y: 4}
     flatten: 0
@@ -780,7 +780,7 @@ ScriptedImporter:
     spriteName: assault laser
     isGroup: 0
     parentIndex: 10
-    spriteID: 64ed32d69a6f93d448277f72eac37c1c
+    spriteID: 0f22ada48f29c4743bffc109d69e5119
     layerID: 1832
     mosaicPosition: {x: 7311, y: 3743}
     flatten: 0
@@ -790,7 +790,7 @@ ScriptedImporter:
     spriteName: sniper lazer
     isGroup: 0
     parentIndex: 10
-    spriteID: a333de30036c6eb4bbdb641c73847f44
+    spriteID: d6cffe252a6287e4e833938411aecd90
     layerID: 1833
     mosaicPosition: {x: 4, y: 5582}
     flatten: 0
@@ -800,7 +800,7 @@ ScriptedImporter:
     spriteName: Layer 103
     isGroup: 0
     parentIndex: 10
-    spriteID: 73599c03dbad7aa489a884bb4e3b86c3
+    spriteID: ea1fbe0109f215f42b0562a627b12ab1
     layerID: 1834
     mosaicPosition: {x: 6248, y: 2793}
     flatten: 0
@@ -810,7 +810,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: e8eccb47b26e8e9498279b30043af84c
+    spriteID: 90d228831d3a5134690d528b4edc1993
     layerID: 1034
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -820,7 +820,7 @@ ScriptedImporter:
     spriteName: mg-plazma
     isGroup: 0
     parentIndex: 16
-    spriteID: bafb0b10d1028f04cbeddbe5b48775f8
+    spriteID: 5a126a995fe65054a953d45e55cd9913
     layerID: 1231
     mosaicPosition: {x: 6248, y: 2095}
     flatten: 0
@@ -830,7 +830,7 @@ ScriptedImporter:
     spriteName: assault plazma
     isGroup: 0
     parentIndex: 16
-    spriteID: 5d4e0a33fc8eb1d43b50ac9a997bf694
+    spriteID: f3395041c96bdda43a52413e59896541
     layerID: 1032
     mosaicPosition: {x: 7358, y: 4206}
     flatten: 0
@@ -840,7 +840,7 @@ ScriptedImporter:
     spriteName: pistol plazma
     isGroup: 0
     parentIndex: 16
-    spriteID: bf3b3718d31b8b143a78dd22c8101ee9
+    spriteID: 67b14d3c616f229408ecfcd5aa9e450c
     layerID: 1033
     mosaicPosition: {x: 7534, y: 1597}
     flatten: 0
@@ -850,7 +850,7 @@ ScriptedImporter:
     spriteName: sniper plazma
     isGroup: 0
     parentIndex: 16
-    spriteID: b1f8ca6c645804140b384b33b5cc59eb
+    spriteID: 039229f75e61d6147b2fb1b349742a2e
     layerID: 1125
     mosaicPosition: {x: 6248, y: 4999}
     flatten: 0
@@ -860,7 +860,7 @@ ScriptedImporter:
     spriteName: shotgun plazma
     isGroup: 0
     parentIndex: 16
-    spriteID: fb5db47f6a444f445a2233caec6b89d3
+    spriteID: 3a9860fb1209e83418e3ed3f246842bc
     layerID: 1167
     mosaicPosition: {x: 7377, y: 3278}
     flatten: 0
@@ -870,7 +870,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: cd2f689d6a3b1ff4b9231d0bceb4ffc5
+    spriteID: b76772b066457cc4a80f7ce4841b96e3
     layerID: 1769
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
@@ -880,7 +880,7 @@ ScriptedImporter:
     spriteName: pistol
     isGroup: 0
     parentIndex: 22
-    spriteID: 56f3a82b8024e004ebc1925c922245c1
+    spriteID: cab800cf20a960146ace3dae50bf5fc9
     layerID: 1749
     mosaicPosition: {x: 7493, y: 4999}
     flatten: 0
@@ -890,7 +890,7 @@ ScriptedImporter:
     spriteName: shotgun
     isGroup: 0
     parentIndex: 22
-    spriteID: 8b7d7b555122d4947b34ea543211047d
+    spriteID: a1abc647a7627c248b1e94faae0b430f
     layerID: 1748
     mosaicPosition: {x: 1140, y: 5582}
     flatten: 0
@@ -900,7 +900,7 @@ ScriptedImporter:
     spriteName: assault
     isGroup: 0
     parentIndex: 22
-    spriteID: 9c846404984292e48b4aa0a659aaa974
+    spriteID: 20fb51ccb1e718a4c9eb59338af1bb70
     layerID: 1747
     mosaicPosition: {x: 4, y: 5922}
     flatten: 0
@@ -910,7 +910,7 @@ ScriptedImporter:
     spriteName: sniper
     isGroup: 0
     parentIndex: 22
-    spriteID: b938596cfcd42864f888284f039f817c
+    spriteID: ac412b2526cc09349a84dc7e9f98a8a5
     layerID: 1746
     mosaicPosition: {x: 6248, y: 4642}
     flatten: 0
@@ -920,7 +920,7 @@ ScriptedImporter:
     spriteName: machine gun
     isGroup: 0
     parentIndex: 22
-    spriteID: 87fd8664130869146884d9ac194b757e
+    spriteID: f2b4bdd710e7eb9498e2702535afa480
     layerID: 1745
     mosaicPosition: {x: 6248, y: 3278}
     flatten: 0
@@ -930,7 +930,7 @@ ScriptedImporter:
     spriteName: bg
     isGroup: 0
     parentIndex: -1
-    spriteID: a8cabdebd9c618e45b2ad45c34403079
+    spriteID: 367d04111c528d647befe4389326fa8d
     layerID: 1811
     mosaicPosition: {x: 4, y: 4}
     flatten: 0
@@ -940,7 +940,7 @@ ScriptedImporter:
     spriteName: Layer 6
     isGroup: 0
     parentIndex: -1
-    spriteID: 236dcf95d346953459904dcf5033cc49
+    spriteID: 601de21d3a90df34f9a29e5aa94353dd
     layerID: 10
     mosaicPosition: {x: 4, y: 2793}
     flatten: 0
@@ -950,7 +950,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 0
     parentIndex: -1
-    spriteID: 467f411c58614944cac077f014db6537
+    spriteID: 14479627be75b9048845224a9a370667
     layerID: 8
     mosaicPosition: {x: 0, y: 0}
     flatten: 0
