@@ -515,7 +515,6 @@ GameObject:
   m_Component:
   - component: {fileID: 108401671522630173}
   - component: {fileID: 108401671522630162}
-  - component: {fileID: 7106743990835128796}
   - component: {fileID: -1457097713904000064}
   - component: {fileID: 1261873219886378273}
   - component: {fileID: -6391146930300714261}
@@ -567,18 +566,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &7106743990835128796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108401671522630175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fc1c76d8581742478d19d6abe6be98b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-1457097713904000064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +593,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: PlayerOneMovement
+  m_DefaultActionMap: KeyboardMovement
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!58 &1261873219886378273
