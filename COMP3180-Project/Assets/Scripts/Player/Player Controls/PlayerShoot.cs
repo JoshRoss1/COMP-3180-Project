@@ -11,31 +11,17 @@ public class PlayerShoot : MonoBehaviour
 
     //Shooting References
     public GameObject bulletPrefab;
-    private GameObject firingPoint;
 
     //Aim Direction
     public float offset = 1f;
     private Vector2 direction;
-    private Vector2 lookPosition;
-
-    //Player Sprite References
-    private GameObject playerHead;
-    private GameObject playerBody;
-    private GameObject playerLegLeft;
-    private GameObject playerLegRight;
 
     private void Awake()
     {
         playerControls = GetComponentInParent<PlayerInput>();
-        //Find Firing Point
-        firingPoint = GameObject.Find("ProjPoint");
-        //Find Body Part Game Objects
-        playerHead = GameObject.Find("Head");
-        playerBody = GameObject.Find("Body");
-        playerLegLeft = GameObject.Find("LeftLeg");
-        playerLegRight = GameObject.Find("RightLeg");
-        playerControls.actions["Shoot"].performed += ctx => Shoot();
 
+        playerControls.actions["Aim"].performed += ctx => direction = ctx.ReadValue<Vector2>();
+        playerControls.actions["Shoot"].performed += ctx => Shoot();
 
     }
 
@@ -43,50 +29,27 @@ public class PlayerShoot : MonoBehaviour
     void Update()
     {
         DirectionalAim();
-        
     }
 
     private void Shoot()
     {
-        Vector2 dirNormalised = lookPosition.normalized;
+        Vector2 dirNormalised = direction.normalized;
 
-        //Spawning Bullet
-        GameObject bullet = Instantiate(bulletPrefab, firingPoint.transform.position, Quaternion.identity);
+        if(playerManager.GetComponent<PlayerDetails>().playerID == 1)
+        {
+            Debug.Log("Player 1 Shot");
+        }
+
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
         float speed = bullet.GetComponent<Bullet>().speed;
         bullet.GetComponent<Rigidbody2D>().AddForce(dirNormalised * speed, ForceMode2D.Impulse);
     }
 
     private void DirectionalAim()
-    {
-        playerControls.actions["Aim"].performed += ctx => lookPosition = ctx.ReadValue<Vector2>();
-        direction = new Vector2(lookPosition.x - transform.localPosition.x, lookPosition.y - transform.localPosition.y);
-
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+    { 
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 80 * Time.deltaTime);
-
-        Debug.Log(transform.eulerAngles.z);
-
-        //Sprite Flip
-        if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-        {
-            playerHead.GetComponent<SpriteRenderer>().flipX = true;
-            playerBody.GetComponent<SpriteRenderer>().flipX = true;
-            playerLegLeft.GetComponent<SpriteRenderer>().flipX = true;
-            playerLegRight.GetComponent<SpriteRenderer>().flipX = true;
-            this.GetComponent<SpriteRenderer>().flipX = true;
-            this.GetComponent<SpriteRenderer>().flipY = true;
-
-        }
-        else
-        {
-            playerHead.GetComponent<SpriteRenderer>().flipX = false;
-            playerBody.GetComponent<SpriteRenderer>().flipX = false;
-            playerLegLeft.GetComponent<SpriteRenderer>().flipX = false;
-            playerLegRight.GetComponent<SpriteRenderer>().flipX = false;
-            this.GetComponent<SpriteRenderer>().flipX = false;
-            this.GetComponent<SpriteRenderer>().flipY = false;
-        }
     }
 
     private void OnEnable()
