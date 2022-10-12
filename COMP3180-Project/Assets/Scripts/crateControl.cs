@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class crateControl : MonoBehaviour
 {
-    //Merge Fix
+
     //Drop logic
     public List<GameObject> drops;
 
