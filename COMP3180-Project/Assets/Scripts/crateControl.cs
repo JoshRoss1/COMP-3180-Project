@@ -45,25 +45,32 @@ public class crateControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        /*
+         * Get reference to PlayerInput component of the player.
+         * In this case the player is the Game Object of the collision.
+         */
+        playerControls = collision.gameObject.GetComponent<PlayerInput>();
+
+        //Read input from PlayerInput and perform the method CrateOpen()
+        playerControls.actions["Interact"].performed += ctx => CrateOpen();
+
         if (collision.gameObject.CompareTag("Player1"))
         {
-            if (playerControls.actions["Interact"].triggered)
-            {
-                spriteRenderer.sprite = openSprite;
-                isOpen = true;
                 PlayerOneDrop();
-            }
         }
 
         if (collision.gameObject.CompareTag("Player2"))
         {
-            if (playerControls.actions["Interact"].triggered)
-            {
-                spriteRenderer.sprite = openSprite;
-                isOpen = true;
                 //PlayerTwoDrop();
-            }
         }
+    }
+
+    void CrateOpen()
+    {
+        //Everything to do when the crate is opened
+        spriteRenderer.sprite = openSprite;
+        isOpen = true;
     }
 
     private void PlayerOneDrop()
