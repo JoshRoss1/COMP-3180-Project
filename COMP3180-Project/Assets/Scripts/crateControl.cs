@@ -15,6 +15,12 @@ public class crateControl : MonoBehaviour
     public int playerOneTotal;
     public int playerOneRandomNumber;
 
+    public GameObject playerTwo;
+    private Player2LootDrops playerTwoLoot;
+
+    public int playerTwoTotal;
+    public int playerTwoRandomNumber;
+
     //Change sprite to animate opening crate.
     [SerializeField]
     private SpriteRenderer spriteRenderer;
@@ -36,6 +42,8 @@ public class crateControl : MonoBehaviour
         spriteRenderer.sprite = closedSprite;
 
         playerOneLoot = playerOne.GetComponent<Player1LootDrops>();
+
+        playerTwoLoot = playerTwo.GetComponent<Player2LootDrops>();
     }
 
     void Update()
@@ -53,24 +61,35 @@ public class crateControl : MonoBehaviour
         playerControls = collision.gameObject.GetComponent<PlayerInput>();
 
         //Read input from PlayerInput and perform the method CrateOpen()
-        playerControls.actions["Interact"].performed += ctx => CrateOpen();
+        //playerControls.actions["Interact"].performed += ctx => CrateOpenP1();
 
         if (collision.gameObject.CompareTag("Player1"))
         {
-                PlayerOneDrop();
+            playerControls.actions["Interact"].performed += ctx => CrateOpenP1();
         }
 
         if (collision.gameObject.CompareTag("Player2"))
         {
-                //PlayerTwoDrop();
+            playerControls.actions["Interact"].performed += ctx => CrateOpenP2();
         }
     }
 
-    void CrateOpen()
+    void CrateOpenP1()
     {
         //Everything to do when the crate is opened
         spriteRenderer.sprite = openSprite;
         isOpen = true;
+
+        PlayerOneDrop();
+    }
+
+    void CrateOpenP2()
+    {
+        //Everything to do when the crate is opened
+        spriteRenderer.sprite = openSprite;
+        isOpen = true;
+
+        PlayerTwoDrop();
     }
 
     private void PlayerOneDrop()
@@ -100,6 +119,31 @@ public class crateControl : MonoBehaviour
         }
     }
 
+    private void PlayerTwoDrop()
+    {
+        foreach (var item in playerTwoLoot.lootTable)
+        {
+            playerTwoTotal += item;
+        }
 
+        playerTwoRandomNumber = Random.Range(0, playerTwoTotal);
+
+        for (int i = 0; i < playerTwoLoot.lootTable.Length; i++)
+        {
+            if (playerTwoRandomNumber <= playerTwoLoot.lootTable[i])
+            {
+                //instantiate corresponding GameObject here.
+
+                Debug.Log("You recieved :" + drops[i].name);
+                Instantiate(drops[i], transform.position, Quaternion.identity);
+
+                return;
+            }
+            else
+            {
+                playerTwoRandomNumber -= playerTwoLoot.lootTable[i];
+            }
+        }
+    }
 
 }
