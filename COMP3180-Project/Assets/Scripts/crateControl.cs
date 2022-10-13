@@ -109,7 +109,7 @@ public class crateControl : MonoBehaviour
 
                 Debug.Log("You recieved :" + drops[i].name);
                 Instantiate(drops[i], transform.position, Quaternion.identity);
-
+                Destroy(gameObject);
                 return;
             }
             else
@@ -136,7 +136,7 @@ public class crateControl : MonoBehaviour
 
                 Debug.Log("You recieved :" + drops[i].name);
                 Instantiate(drops[i], transform.position, Quaternion.identity);
-
+                Destroy(gameObject);
                 return;
             }
             else

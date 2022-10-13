@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9177342628767801087}
   - component: {fileID: 9177342628767801086}
   m_Layer: 0
-  m_Name: Sniper_Plasma
+  m_Name: SniperPlasma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
