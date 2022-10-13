@@ -3906,13 +3906,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1059804711}
   - component: {fileID: 1059804710}
+  - component: {fileID: 1059804712}
   - component: {fileID: 1059804709}
   - component: {fileID: 1059804708}
   - component: {fileID: 1059804707}
   - component: {fileID: 1059804706}
   m_Layer: 0
   m_Name: Player 2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4042,6 +4043,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1059804712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059804705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7864a5944d74c04a80f767c6227c27e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootTable: 1900000016000000100000000c0000000900000007000000040000000300000002000000
 --- !u!1 &1116850462
 GameObject:
   m_ObjectHideFlags: 0
@@ -6533,7 +6547,6 @@ GameObject:
   - component: {fileID: 1122850522}
   - component: {fileID: 1122850521}
   - component: {fileID: 5509700289581638212}
-  - component: {fileID: 5509700289581638210}
   - component: {fileID: 5509700289581638211}
   m_Layer: 0
   m_Name: Crate
@@ -9500,7 +9513,7 @@ GameObject:
   - component: {fileID: 4106329004927325767}
   m_Layer: 0
   m_Name: Player 1
-  m_TagString: Player
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9974,32 +9987,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28274885, y: 0.48211256}
   m_EdgeRadius: 0
---- !u!61 &5509700289581638210
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122850520}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.026000738, y: -1.3000424}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.73, y: 5.83}
-    newSize: {x: 6.73, y: 5.83}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.1018481, y: 1.7738675}
-  m_EdgeRadius: 0
 --- !u!61 &5509700289581638211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10051,6 +10038,9 @@ MonoBehaviour:
   playerOne: {fileID: 2176249609043619507}
   playerOneTotal: 0
   playerOneRandomNumber: 0
+  playerTwo: {fileID: 1059804705}
+  playerTwoTotal: 0
+  playerTwoRandomNumber: 0
   spriteRenderer: {fileID: 1122850521}
   openSprite: {fileID: 21300000, guid: 5099eeeaa10aef244a07099b5287790f, type: 3}
   closedSprite: {fileID: 21300000, guid: 9bdaf40d2f8abb3498bcaf0854856813, type: 3}
