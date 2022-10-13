@@ -7,7 +7,7 @@ public class crateControl : MonoBehaviour
 {
 
     //Drop logic
-    public List<GameObject> drops;
+    public GameObject[] drops;
 
     public GameObject playerOne;
     private Player1LootDrops playerOneLoot;
@@ -87,6 +87,10 @@ public class crateControl : MonoBehaviour
             if (playerOneRandomNumber <= playerOneLoot.lootTable[i])
             {
                 //instantiate corresponding GameObject here.
+
+                Debug.Log("You recieved :" + drops[i].name);
+                Instantiate(drops[i], transform.position, Quaternion.identity);
+
                 return;
             }
             else
@@ -95,4 +99,7 @@ public class crateControl : MonoBehaviour
             }
         }
     }
+
+
+
 }
