@@ -7,6 +7,8 @@ TagManager:
   - Player1
   - Player2
   - Bullet
+  - Weapon
+  - WeaponSlot
   layers:
   - Default
   - TransparentFX

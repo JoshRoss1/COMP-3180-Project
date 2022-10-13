@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 8394717090876810328}
   - component: {fileID: 1064060001729702585}
   - component: {fileID: 4037840267165959539}
+  - component: {fileID: -1271679518470935159}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -463,6 +464,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28274885, y: 0.48211256}
   m_EdgeRadius: 0
+--- !u!114 &-1271679518470935159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217531678849580423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7f4a9d847fcb547a944151cc06a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2217531678894193008
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +995,7 @@ GameObject:
   - component: {fileID: 6262347468362460530}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: WeaponSlot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1056,6 +1070,10 @@ PrefabInstance:
     - target: {fileID: 3682710168577813583, guid: d34b11ada0b404043a0b6b2dcd106198, type: 3}
       propertyPath: m_Name
       value: assault
+      objectReference: {fileID: 0}
+    - target: {fileID: 3682710168577813583, guid: d34b11ada0b404043a0b6b2dcd106198, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d34b11ada0b404043a0b6b2dcd106198, type: 3}
