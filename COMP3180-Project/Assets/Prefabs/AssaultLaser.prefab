@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2926817034691421319}
   - component: {fileID: 8195572231936122815}
   - component: {fileID: 6582833171413156872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: AssaultLaser
-  m_TagString: Weapon
+  m_TagString: AssaultLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1093606149370246341}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ProjPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

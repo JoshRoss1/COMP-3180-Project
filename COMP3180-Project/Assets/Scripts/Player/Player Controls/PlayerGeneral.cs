@@ -26,27 +26,41 @@ public class PlayerGeneral : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
     }
 
     void ItemPickup(GameObject newItem)
     {
+        Debug.Log("Interacting with: " + newItem.gameObject.name);
         for(int i = 0; i < transform.childCount; i++)
         {
-            if (transform.GetChild(i).tag == "WeaponSlot")
+            if (transform.GetChild(i).CompareTag("WeaponSlot"))
             {
-                Instantiate(newItem, transform.GetChild(i));            //Spawn gun that was picked up in hand
-                Destroy(transform.GetChild(i).GetChild(0).gameObject);  //Destroy gun in hand
-                Destroy(newItem);                                       //Destroy gun that was picked up
-                Debug.Log(i);
+                
+                for (int j = 0; j < transform.GetChild(i).childCount; j++)
+                {
+                    
+                    if (!(transform.GetChild(i).GetChild(j).tag == newItem.tag))
+                    {
+                        transform.GetChild(i).GetChild(j).gameObject.SetActive(false);
+                        transform.GetChild(i).GetChild(j).gameObject.layer = 6;
+                    } else
+                    {
+                        transform.GetChild(i).GetChild(j).gameObject.SetActive(true);
+                        transform.GetChild(i).GetChild(j).gameObject.layer = 7;
+                        Debug.Log("Active Gun: " + transform.GetChild(i).GetChild(j).gameObject.name);
+                    }
+                }
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Weapon")
+        if (collision.gameObject.layer == 6)
         {
             playerControls.actions["Interact"].performed += ctx => ItemPickup(collision.gameObject);
+            Debug.Log("Collision object: " + collision.gameObject.name);
         }
     }
 

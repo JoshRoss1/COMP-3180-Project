@@ -11,6 +11,14 @@ TagManager:
   - WeaponSlot
   - Obstacle
   - Laser1End
+  - assault
+  - AssaultLaser
+  - Flamethrower
+  - RocketLauncher
+  - ShotGunLaser
+  - SniperPlasma
+  - TeslaCannon
+  - PlasmaHeavy
   layers:
   - Default
   - TransparentFX
@@ -18,8 +26,8 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
-  - 
+  - Weapon
+  - Equipped Weapon
   - 
   - 
   - 

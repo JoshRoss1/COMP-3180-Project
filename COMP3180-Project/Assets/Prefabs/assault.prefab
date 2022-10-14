@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3682710168577813569}
   - component: {fileID: 3682710168577813568}
   - component: {fileID: 1196945600767404192}
-  m_Layer: 0
-  m_Name: Assault
-  m_TagString: Untagged
+  - component: {fileID: -432928887560245575}
+  m_Layer: 6
+  m_Name: assault
+  m_TagString: assault
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 9.210001, y: 3.62}
   m_EdgeRadius: 0
+--- !u!114 &-432928887560245575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3682710168577813583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c06116a77e5484681aa1bee9b4f52e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerManager: {fileID: 9204064685868613952, guid: 4c918cf2c78fe124aa3498d61feae66b, type: 3}
+  bulletPrefab: {fileID: 8792831310057691133, guid: 5e6dfca1fc562124a9dafba4808be52b, type: 3}
+  offset: 1
 --- !u!1 &8408915342472324609
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5857140192456353243}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ProjPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
