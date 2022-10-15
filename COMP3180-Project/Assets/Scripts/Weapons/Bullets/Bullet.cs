@@ -10,10 +10,10 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player1" || collision.gameObject.tag == "Player2")
+        if(collision.gameObject.tag == "Wall")
         {
             Destroy(gameObject);
-            collision.gameObject.GetComponent<PlayerGeneral>().health -= damage;
+            //collision.gameObject.GetComponent<PlayerGeneral>().health -= damage;
         }
     }
 }

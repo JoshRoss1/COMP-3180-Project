@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3682710168577813568}
   - component: {fileID: 1196945600767404192}
   - component: {fileID: -432928887560245575}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: assault
   m_TagString: assault
   m_Icon: {fileID: 0}
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c06116a77e5484681aa1bee9b4f52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerControls: {fileID: 8394717090876810328, guid: 76685cb76769d4a45b1a6912f91c50f5, type: 3}
   playerManager: {fileID: 9204064685868613952, guid: 4c918cf2c78fe124aa3498d61feae66b, type: 3}
   bulletPrefab: {fileID: 8792831310057691133, guid: 5e6dfca1fc562124a9dafba4808be52b, type: 3}
   offset: 1
@@ -137,7 +138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5857140192456353243}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ProjPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8408915342472324609}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.69, y: -0, z: 0}
+  m_LocalPosition: {x: 8.2, y: -0.16, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []

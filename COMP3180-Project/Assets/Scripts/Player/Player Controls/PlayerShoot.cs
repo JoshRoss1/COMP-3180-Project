@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     //Player References
-    PlayerInput playerControls;
+    public PlayerInput playerControls;
     public GameObject playerManager;
 
     //Shooting References
@@ -26,9 +26,8 @@ public class PlayerShoot : MonoBehaviour
 
     private void Awake()
     {
-        playerControls = GetComponentInParent<PlayerInput>();
-        //Find Firing Point
-        firingPoint = GameObject.Find("ProjPoint");
+        
+
         //Find Body Part Game Objects
         playerHead = GameObject.Find("Head");
         playerBody = GameObject.Find("Body");
@@ -37,6 +36,12 @@ public class PlayerShoot : MonoBehaviour
         playerControls.actions["Shoot"].performed += ctx => Shoot();
 
 
+    }
+
+    private void Start()
+    {
+        //Find Firing Point
+        firingPoint = gameObject.transform.GetChild(0).gameObject; //Update Projection Point
     }
 
     // Update is called once per frame
@@ -58,6 +63,8 @@ public class PlayerShoot : MonoBehaviour
 
     private void DirectionalAim()
     {
+        
+
         playerControls.actions["Aim"].performed += ctx => lookPosition = ctx.ReadValue<Vector2>();
         direction = new Vector2(lookPosition.x - transform.localPosition.x, lookPosition.y - transform.localPosition.y);
 
