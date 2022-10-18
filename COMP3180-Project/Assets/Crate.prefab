@@ -220,10 +220,10 @@ MonoBehaviour:
   - {fileID: 8803958591630660421, guid: 859164368c2ed814cb71658cf2d61690, type: 3}
   - {fileID: 7097479002462548924, guid: 84d1ebb61a56f80478cfbd066f317ae4, type: 3}
   - {fileID: 732809719206279158, guid: 1e08bd828a118d146aeb04d87307ab73, type: 3}
-  playerOne: {fileID: 0}
+  playerOne: {fileID: 2217531678849580423, guid: 76685cb76769d4a45b1a6912f91c50f5, type: 3}
   playerOneTotal: 0
   playerOneRandomNumber: 0
-  playerTwo: {fileID: 0}
+  playerTwo: {fileID: 2217531678849580423, guid: 13afa652ee6317f4ba0894903cfeb285, type: 3}
   playerTwoTotal: 0
   playerTwoRandomNumber: 0
   spriteRenderer: {fileID: 903462112921161917}

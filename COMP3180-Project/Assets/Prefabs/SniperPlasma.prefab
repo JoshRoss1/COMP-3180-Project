@@ -41,8 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9177342628767801087}
   - component: {fileID: 9177342628767801086}
-  - component: {fileID: -1484592810990961568}
-  - component: {fileID: 8931389025448710465}
+  - component: {fileID: 8984834126094618800}
   m_Layer: 0
   m_Name: SniperPlasma
   m_TagString: SniperPlasma
@@ -118,7 +117,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1484592810990961568
+--- !u!114 &8984834126094618800
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,36 +126,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9177342628767801081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00c06116a77e5484681aa1bee9b4f52e, type: 3}
+  m_Script: {fileID: 11500000, guid: beebfe6e22b11114e97baa54c237ae50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControls: {fileID: 8394717090876810328, guid: 76685cb76769d4a45b1a6912f91c50f5, type: 3}
-  playerManager: {fileID: 9204064685868613952, guid: 4c918cf2c78fe124aa3498d61feae66b, type: 3}
   bulletPrefab: {fileID: 8792831310057691133, guid: 5e6dfca1fc562124a9dafba4808be52b, type: 3}
-  offset: 1
---- !u!61 &8931389025448710465
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9177342628767801081}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 12.44, y: 3.11}
-    newSize: {x: 12.44, y: 3.11}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 12.44, y: 3.11}
-  m_EdgeRadius: 0
+  firingPoint: {fileID: 1929811412203343499}
+  lookPosition: {x: 0, y: 0}

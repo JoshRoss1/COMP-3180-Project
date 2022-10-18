@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     //Player References
+    [HideInInspector]
     public PlayerInput playerControls;
     public GameObject playerManager;
 
@@ -26,7 +27,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Awake()
     {
-        
+        playerControls = transform.root.gameObject.GetComponent<PlayerInput>();
 
         //Find Body Part Game Objects
         playerHead = GameObject.Find("Head");
@@ -34,21 +35,27 @@ public class PlayerShoot : MonoBehaviour
         playerLegLeft = GameObject.Find("LeftLeg");
         playerLegRight = GameObject.Find("RightLeg");
         playerControls.actions["Shoot"].performed += ctx => Shoot();
-
-
+        
     }
 
     private void Start()
     {
         //Find Firing Point
         firingPoint = gameObject.transform.GetChild(0).gameObject; //Update Projection Point
+        //playerControls = new PlayerInput transform.root.gameObject.GetComponent<PlayerInput>();
+        
+        Debug.Log("Player Controls attached to Player 2's gun is: " + playerControls.gameObject.name);
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+        //Debug.Log(playerControls.gameObject.name);
         DirectionalAim();
-
+       
     }
 
     private void Shoot()

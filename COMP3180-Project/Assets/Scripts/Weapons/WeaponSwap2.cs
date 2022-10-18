@@ -5,13 +5,25 @@ using UnityEngine.InputSystem;
 
 public class WeaponSwap2 : MonoBehaviour
 {
-    public PlayerInput playerControls;
+    [SerializeField]
+    private PlayerInput weaponSwapPlayerControls;
 
-    private GameObject currentWeapon;
+    public GameObject currentWeapon;
+    private GameObject gunSpawnPos;
+
+    private GameObject collisionObject;
+
+
+    private void Awake()
+    {
+        weaponSwapPlayerControls = transform.root.GetComponent<PlayerInput>();
+        gunSpawnPos = this.gameObject;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
@@ -19,6 +31,7 @@ public class WeaponSwap2 : MonoBehaviour
     void Update()
     {
         currentWeapon = transform.GetChild(0).gameObject;
+        Debug.Log(collisionObject.name);
     }
 
     void ItemPickup(GameObject newItem)
@@ -27,35 +40,37 @@ public class WeaponSwap2 : MonoBehaviour
 
         if(newItem.CompareTag("Weapon"))
         {
-            Destroy(currentWeapon);
-            GameObject newWeapon = Instantiate(newPrefab, this.transform.position, Quaternion.identity);
-            Destroy(newItem);
-            newWeapon.transform.parent = this.transform;
+            //Destroy(currentWeapon);
+            GameObject newWeapon = Instantiate(newPrefab, gunSpawnPos.transform.position, Quaternion.identity);
+            //Destroy(newItem);
+            newItem.SetActive(false);
+            newWeapon.transform.parent = transform;
             currentWeapon = newWeapon;
-            currentWeapon.GetComponent<BoxCollider2D>().enabled = false;
+
         }
-        Debug.Log(currentWeapon);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        collisionObject = collision.gameObject;
         if (collision.gameObject.layer == 6)
         {
-            playerControls.actions["Interact"].performed += ctx => ItemPickup(collision.gameObject);
-            Debug.Log("Collision object: " + collision.gameObject.name);
-        } else
-        {
-            Debug.Log("Can't pick up!");
+            weaponSwapPlayerControls.actions["Interact"].performed += ctx => ItemPickup(collisionObject);
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        collisionObject = null;
     }
 
     private void OnEnable()
     {
-        playerControls.actions.Enable();
+        weaponSwapPlayerControls.actions.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.actions.Disable();
+        weaponSwapPlayerControls.actions.Disable();
     }
 }
