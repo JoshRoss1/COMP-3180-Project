@@ -32,7 +32,6 @@ public class WeaponShoot : MonoBehaviour
             DirectionalAim();
 
         playerControllerInput.actions["Shoot"].performed += ctx => Shoot();
-        Debug.Log(gameObject.transform.root.name + " -> " + playerControllerInput.currentActionMap);
     }
 
     private void Shoot()

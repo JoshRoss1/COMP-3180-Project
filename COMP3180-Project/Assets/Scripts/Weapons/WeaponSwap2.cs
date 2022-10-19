@@ -31,7 +31,6 @@ public class WeaponSwap2 : MonoBehaviour
     void Update()
     {
         currentWeapon = transform.GetChild(0).gameObject;
-        Debug.Log(collisionObject.name);
     }
 
     void ItemPickup(GameObject newItem)
@@ -40,12 +39,12 @@ public class WeaponSwap2 : MonoBehaviour
 
         if(newItem.CompareTag("Weapon"))
         {
-            //Destroy(currentWeapon);
+            
             GameObject newWeapon = Instantiate(newPrefab, gunSpawnPos.transform.position, Quaternion.identity);
-            //Destroy(newItem);
-            newItem.SetActive(false);
             newWeapon.transform.parent = transform;
+            Destroy(currentWeapon);
             currentWeapon = newWeapon;
+            Destroy(newItem);
 
         }
     }

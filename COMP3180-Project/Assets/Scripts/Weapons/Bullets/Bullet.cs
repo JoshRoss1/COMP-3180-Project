@@ -8,12 +8,23 @@ public class Bullet : MonoBehaviour
     public float damage = 1f;
     public float speed = 1f;
 
+    private string tag;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Wall")
+        tag = collision.gameObject.tag;
+
+        switch (tag)
         {
-            Destroy(gameObject);
-            //collision.gameObject.GetComponent<PlayerGeneral>().health -= damage;
+            case "Wall":
+                Destroy(gameObject);
+                break;
+            case "Player":
+                Destroy(gameObject);
+                collision.gameObject.GetComponent<PlayerGeneral>().health -= damage;
+                break;
+            case null:
+                break;
         }
     }
 }
