@@ -33,7 +33,7 @@ public class WeaponSwap2 : MonoBehaviour
         currentWeapon = transform.GetChild(0).gameObject;
     }
 
-    void ItemPickup(GameObject newItem)
+    void WeaponPickup(GameObject newItem)
     {
         GameObject newPrefab = newItem.GetComponent<WeaponPrefabChange>().fullWeaponPrefab;
 
@@ -54,7 +54,7 @@ public class WeaponSwap2 : MonoBehaviour
         collisionObject = collision.gameObject;
         if (collision.gameObject.layer == 6)
         {
-            weaponSwapPlayerControls.actions["Interact"].performed += ctx => ItemPickup(collisionObject);
+            weaponSwapPlayerControls.actions["Interact"].performed += ctx => WeaponPickup(collisionObject);
         }
     }
 

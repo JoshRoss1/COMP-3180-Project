@@ -60,32 +60,29 @@ public class crateControl : MonoBehaviour
         /*
          * Get reference to PlayerInput component of the player.
          * In this case the player is the Game Object of the collision.
+         * Also get reference to player's ID which is in their PlayerGeneral script
          */
         playerControls = collision.gameObject.GetComponent<PlayerInput>();
+        PlayerGeneral playerGeneral = collision.gameObject.GetComponent<PlayerGeneral>();
 
         //Read input from PlayerInput and perform the method CrateOpen()
         //playerControls.actions["Interact"].performed += ctx => CrateOpenP1();
 
-        if (collision.gameObject.CompareTag("Player1"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            playerControls.actions["Interact"].performed += ctx => CrateOpenP1();
+            if(playerGeneral.playerID == 1)
+            {
+                playerControls.actions["Interact"].performed += ctx => CrateOpenP1();
+
+            } else if (playerGeneral.playerID == 2)
+            {
+                playerControls.actions["Interact"].performed += ctx => CrateOpenP2();
+            }
+
             isOpen = true;
             crateC.crateCount--;
-
-        } else
-        {
-            isOpen = false;
         }
-
-        if (collision.gameObject.CompareTag("Player2"))
-        {
-            playerControls.actions["Interact"].performed += ctx => CrateOpenP2();
-            isOpen = true;
-            crateC.crateCount--;
-        } else
-        {
-            isOpen = false;
-        }
+        isOpen = false;
     }
 
     void CrateOpenP1()

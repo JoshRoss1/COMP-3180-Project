@@ -61,7 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8394717090876810328, guid: 13afa652ee6317f4ba0894903cfeb285, type: 3}
       propertyPath: m_DefaultActionMap
-      value: PlayerTwoMovement
+      value: PlayerOneMovement
+      objectReference: {fileID: 0}
+    - target: {fileID: 9056873770458518731, guid: 13afa652ee6317f4ba0894903cfeb285, type: 3}
+      propertyPath: playerID
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13afa652ee6317f4ba0894903cfeb285, type: 3}
@@ -83,3 +87,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  playerID: 0
