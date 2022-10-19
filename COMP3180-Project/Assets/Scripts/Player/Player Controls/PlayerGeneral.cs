@@ -36,13 +36,29 @@ public class PlayerGeneral : MonoBehaviour
         
     }
 
+    public bool player1died;
+    public bool player2died;
+
     // Update is called once per frame
     void Update()
     {
+        
+        //check which player died to calculate score.
         if(health <= 0)
         {
             Destroy(gameObject);
+            if (gameObject.tag == "Player1")
+            {
+                player1died = true;
+            }
+            if (gameObject.tag == "Player2")
+            {
+                player2died = true;
+            }
         }
+
+        player1died = false;
+        player2died = false;
 
         //Set up Sprite Flip
         weaponRotation = GameObject.Find("Weapon").GetComponentInChildren<WeaponShoot>();
