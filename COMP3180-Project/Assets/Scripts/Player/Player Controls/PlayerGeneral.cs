@@ -11,9 +11,20 @@ public class PlayerGeneral : MonoBehaviour
 
     //Interactables
     private HealthDrop healthDrop;
+    private WeaponSwap2 weaponDrop;
 
+    //Player References
     private PlayerInput playerControls;
-    private PlayerGeneral playerStats;
+
+    //Weapon References
+    private WeaponShoot weaponRotation;
+
+    //Sprite References
+    public GameObject playerHead;
+    public GameObject playerBody;
+    public GameObject playerLegLeft;
+    public GameObject playerLegRight;
+
 
 
     // Start is called before the first frame update
@@ -33,16 +44,27 @@ public class PlayerGeneral : MonoBehaviour
             Destroy(gameObject);
         }
 
-        
+        //Set up Sprite Flip
+        weaponRotation = GameObject.Find("Weapon").GetComponentInChildren<WeaponShoot>();
+        SpriteFlip(weaponRotation.GetGunRotation());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Health"))
+        string tag = collision.gameObject.tag;
+
+        switch (tag)
         {
-            healthDrop = collision.GetComponent<HealthDrop>();
-            playerControls.actions["Interact"].performed += ctx => Heal(GetComponent<PlayerGeneral>());
+            case "Health":
+                healthDrop = collision.GetComponent<HealthDrop>();
+                playerControls.actions["Interact"].performed += ctx => Heal(GetComponent<PlayerGeneral>());
+                break;
+            case "Weapon":
+                weaponDrop = GetComponentInChildren<WeaponSwap2>();
+                playerControls.actions["Interact"].performed += ctx => weaponDrop.WeaponPickup(collision.gameObject);
+                break;
         }
+
     }
 
     void Heal(PlayerGeneral playerStats)
@@ -54,6 +76,25 @@ public class PlayerGeneral : MonoBehaviour
             Destroy(healthDrop.gameObject);
         }
 
+    }
+
+    void SpriteFlip(Quaternion gunRotation)
+    {
+        //Sprite Flip
+        if (gunRotation.eulerAngles.z > 90 && gunRotation.eulerAngles.z < 270)
+        {
+            playerHead.GetComponent<SpriteRenderer>().flipX = true;
+            playerBody.GetComponent<SpriteRenderer>().flipX = true;
+            playerLegLeft.GetComponent<SpriteRenderer>().flipX = true;
+            playerLegRight.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            playerHead.GetComponent<SpriteRenderer>().flipX = false;
+            playerBody.GetComponent<SpriteRenderer>().flipX = false;
+            playerLegLeft.GetComponent<SpriteRenderer>().flipX = false;
+            playerLegRight.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 
 }

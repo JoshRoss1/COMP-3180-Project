@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4950135879642882103}
   - component: {fileID: 4950135879642882100}
   m_Layer: 0
-  m_Name: RightLeg
+  m_Name: RightLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 4950135880279775184}
   - component: {fileID: 4950135880279775185}
   m_Layer: 0
-  m_Name: Head
+  m_Name: Head2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 4950135880423497920}
   - component: {fileID: 4950135880423497921}
   m_Layer: 0
-  m_Name: LeftLeg
+  m_Name: LeftLeg2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -652,7 +652,7 @@ GameObject:
   - component: {fileID: 4950135881035768827}
   - component: {fileID: 4950135881035768824}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Body2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -740,9 +740,10 @@ GameObject:
   - component: {fileID: 4950135881223111754}
   - component: {fileID: 4950135881223111757}
   - component: {fileID: 4950135881223111756}
+  - component: {fileID: 2068548535072098290}
   m_Layer: 0
   m_Name: Player 2
-  m_TagString: Player2
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -841,7 +842,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: f9b132e3-04fd-4f62-afcd-66c7271af911
+  m_DefaultActionMap: a4976d82-eaf0-4d69-83fc-907c9418ef07
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!58 &4950135881223111757
@@ -886,6 +887,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28274885, y: 0.48211256}
   m_EdgeRadius: 0
+--- !u!114 &2068548535072098290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4950135881223111759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7f4a9d847fcb547a944151cc06a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  playerID: 0
+  playerHead: {fileID: 4950135880279775187}
+  playerBody: {fileID: 4950135881035768826}
+  playerLegLeft: {fileID: 4950135880423497923}
+  playerLegRight: {fileID: 4950135879642882102}
 --- !u!1 &4950135881344770756
 GameObject:
   m_ObjectHideFlags: 0

@@ -33,12 +33,10 @@ public class WeaponSwap2 : MonoBehaviour
         currentWeapon = transform.GetChild(0).gameObject;
     }
 
-    void WeaponPickup(GameObject newItem)
+    public void WeaponPickup(GameObject newItem)
     {
         GameObject newPrefab = newItem.GetComponent<WeaponPrefabChange>().fullWeaponPrefab;
 
-        if(newItem.CompareTag("Weapon"))
-        {
             
             GameObject newWeapon = Instantiate(newPrefab, gunSpawnPos.transform.position, Quaternion.identity);
             newWeapon.transform.parent = transform;
@@ -46,16 +44,15 @@ public class WeaponSwap2 : MonoBehaviour
             currentWeapon = newWeapon;
             Destroy(newItem);
 
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collisionObject = collision.gameObject;
+        /*collisionObject = collision.gameObject;
         if (collision.gameObject.layer == 6)
         {
             weaponSwapPlayerControls.actions["Interact"].performed += ctx => WeaponPickup(collisionObject);
-        }
+        }*/
     }
 
     private void OnTriggerExit2D(Collider2D collision)

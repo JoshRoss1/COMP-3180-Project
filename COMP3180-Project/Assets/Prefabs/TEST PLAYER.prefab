@@ -465,6 +465,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 25
   playerID: 1
+  playerHead: {fileID: 2217531680313778387}
+  playerBody: {fileID: 2217531679841241596}
+  playerLegLeft: {fileID: 2217531678894193014}
+  playerLegRight: {fileID: 2217531679277786887}
 --- !u!1 &2217531678894193008
 GameObject:
   m_ObjectHideFlags: 0

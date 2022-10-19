@@ -21,6 +21,7 @@ TagManager:
   - PlasmaHeavy
   - Wall
   - Crate
+  - Health
   layers:
   - Default
   - TransparentFX

@@ -317,6 +317,7 @@ GameObject:
   - component: {fileID: 8394717090876810328}
   - component: {fileID: 1064060001729702585}
   - component: {fileID: 4037840267165959539}
+  - component: {fileID: -7768635915677846018}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -463,6 +464,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28274885, y: 0.48211256}
   m_EdgeRadius: 0
+--- !u!114 &-7768635915677846018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2217531678849580423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc7f4a9d847fcb547a944151cc06a94e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  playerID: 0
+  playerHead: {fileID: 2217531680313778413}
+  playerBody: {fileID: 2217531679841241598}
+  playerLegLeft: {fileID: 2217531678894193008}
+  playerLegRight: {fileID: 2217531679277786881}
 --- !u!1 &2217531678894193008
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +493,7 @@ GameObject:
   - component: {fileID: 2217531678894193009}
   - component: {fileID: 2217531678894193014}
   m_Layer: 0
-  m_Name: LeftLeg
+  m_Name: LeftLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -559,7 +578,7 @@ GameObject:
   - component: {fileID: 2217531679277786886}
   - component: {fileID: 2217531679277786887}
   m_Layer: 0
-  m_Name: RightLeg
+  m_Name: RightLeg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -728,7 +747,7 @@ GameObject:
   - component: {fileID: 2217531679841241599}
   - component: {fileID: 2217531679841241596}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Body1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,7 +915,7 @@ GameObject:
   - component: {fileID: 2217531680313778386}
   - component: {fileID: 2217531680313778387}
   m_Layer: 0
-  m_Name: Head
+  m_Name: Head1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1042,7 +1061,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408655d1ed7d55e4cb50eb2ea0ff8c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerControls: {fileID: 0}
+  weaponSwapPlayerControls: {fileID: 0}
+  currentWeapon: {fileID: 0}
 --- !u!1001 &717906558783820238
 PrefabInstance:
   m_ObjectHideFlags: 0

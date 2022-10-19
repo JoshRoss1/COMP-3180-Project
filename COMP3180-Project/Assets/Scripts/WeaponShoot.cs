@@ -7,7 +7,7 @@ public class WeaponShoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     private PlayerInput playerControllerInput;
-    public GameObject firingPoint;
+    private Transform firingPoint;
 
 
     //Shooting and Aiming Variables
@@ -16,33 +16,30 @@ public class WeaponShoot : MonoBehaviour
     [HideInInspector]
     public Vector2 lookPosition;
 
+    
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
 
-        
-        
+        playerControllerInput = transform.root.GetComponent<PlayerInput>();
+
     }
 
     private void Update()
     {
-        playerControllerInput = transform.root.GetComponent<PlayerInput>();
-
-            DirectionalAim();
-
-        playerControllerInput.actions["Shoot"].performed += ctx => Shoot();
+        DirectionalAim();
+        firingPoint = transform.GetChild(0).gameObject.transform;
+        playerControllerInput.actions["Shoot"].performed += ctx => Shoot(firingPoint.transform);
     }
 
-    private void Shoot()
+    private void Shoot(Transform bulletSpawn)
     {
-        //THIS WILL GO INTO A SCRIPT ONTO THE GUNS
-        Vector2 dirNormalised = lookPosition.normalized;
 
         //Spawning Bullet
-        GameObject bullet = Instantiate(bulletPrefab, firingPoint.transform.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawn.transform.position, Quaternion.identity);
         float speed = bullet.GetComponent<Bullet>().speed;
-        bullet.GetComponent<Rigidbody2D>().AddForce(dirNormalised * speed, ForceMode2D.Impulse);
+        bullet.GetComponent<Rigidbody2D>().AddForce(lookPosition.normalized * speed, ForceMode2D.Impulse);
     }
 
     private void DirectionalAim()
@@ -52,25 +49,13 @@ public class WeaponShoot : MonoBehaviour
 
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         Quaternion rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 80 * Time.deltaTime);
-
-        //Sprite Flip
-        if (transform.eulerAngles.z > 90 && transform.eulerAngles.z < 270)
-        {
-            /*playerHead.GetComponent<SpriteRenderer>().flipX = true;
-            playerBody.GetComponent<SpriteRenderer>().flipX = true;
-            playerLegLeft.GetComponent<SpriteRenderer>().flipX = true;
-            playerLegRight.GetComponent<SpriteRenderer>().flipX = true;
-            this.GetComponent<SpriteRenderer>().flipY = true;*/
-
-        }
-        else
-        {
-            /*playerHead.GetComponent<SpriteRenderer>().flipX = false;
-            playerBody.GetComponent<SpriteRenderer>().flipX = false;
-            playerLegLeft.GetComponent<SpriteRenderer>().flipX = false;
-            playerLegRight.GetComponent<SpriteRenderer>().flipX = false;
-            this.GetComponent<SpriteRenderer>().flipY = false;*/
-        }
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotation, 80 * Time.deltaTime);      
     }
+
+    public Quaternion GetGunRotation()
+    {
+        return transform.rotation;
+    }
+
+    
 }
