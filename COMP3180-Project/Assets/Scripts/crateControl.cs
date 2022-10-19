@@ -6,6 +6,9 @@ using UnityEngine.InputSystem;
 public class crateControl : MonoBehaviour
 {
 
+    //
+    private EnviroManager crateC;
+
     //Drop logic
     public GameObject[] drops;
 
@@ -28,7 +31,7 @@ public class crateControl : MonoBehaviour
     [SerializeField]
     private Sprite openSprite, closedSprite;
 
-    private bool isOpen = false;
+    public bool isOpen = false;
 
     PlayerInput playerControls;
 
@@ -66,11 +69,22 @@ public class crateControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Player1"))
         {
             playerControls.actions["Interact"].performed += ctx => CrateOpenP1();
+            isOpen = true;
+            crateC.crateCount--;
+
+        } else
+        {
+            isOpen = false;
         }
 
         if (collision.gameObject.CompareTag("Player2"))
         {
             playerControls.actions["Interact"].performed += ctx => CrateOpenP2();
+            isOpen = true;
+            crateC.crateCount--;
+        } else
+        {
+            isOpen = false;
         }
     }
 
@@ -78,8 +92,6 @@ public class crateControl : MonoBehaviour
     {
         //Everything to do when the crate is opened
         spriteRenderer.sprite = openSprite;
-        isOpen = true;
-
         PlayerOneDrop();
     }
 
@@ -87,8 +99,6 @@ public class crateControl : MonoBehaviour
     {
         //Everything to do when the crate is opened
         spriteRenderer.sprite = openSprite;
-        isOpen = true;
-
         PlayerTwoDrop();
     }
 
