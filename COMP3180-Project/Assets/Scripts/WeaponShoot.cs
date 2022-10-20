@@ -23,7 +23,7 @@ public class WeaponShoot : MonoBehaviour
     {
 
         playerControllerInput = transform.root.GetComponent<PlayerInput>();
-
+        weapon = this.gameObject;
     }
 
     private void Update()
@@ -57,5 +57,8 @@ public class WeaponShoot : MonoBehaviour
         return transform.rotation;
     }
 
-    
+    public GameObject GetWeapon()
+    {
+        return weapon;
+    }
 }
