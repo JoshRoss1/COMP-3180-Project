@@ -7703,6 +7703,7 @@ GameObject:
   - component: {fileID: 825410032}
   - component: {fileID: 825410031}
   - component: {fileID: 825410033}
+  - component: {fileID: 825410034}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -7771,6 +7772,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 825410031}
+--- !u!114 &825410034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 825410029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 249841e28b061254b8732196b6a777b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  player1loot: {fileID: 0}
+  player2loot: {fileID: 0}
+  DDATable: 02000000030000000400000007000000090000000c000000100000001600000019000000
+  HealthTable: 02000000030000000400000007000000090000000c000000100000001600000019000000
 --- !u!1 &826673489
 GameObject:
   m_ObjectHideFlags: 0
