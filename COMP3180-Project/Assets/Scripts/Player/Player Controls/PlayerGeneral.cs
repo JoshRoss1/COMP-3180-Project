@@ -96,6 +96,8 @@ public class PlayerGeneral : MonoBehaviour
 
     void SpriteFlip(Quaternion gunRotation)
     {
+        GameObject weapon = weaponRotation.GetWeapon();
+
         //Sprite Flip
         if (gunRotation.eulerAngles.z > 90 && gunRotation.eulerAngles.z < 270)
         {
@@ -103,6 +105,7 @@ public class PlayerGeneral : MonoBehaviour
             playerBody.GetComponent<SpriteRenderer>().flipX = true;
             playerLegLeft.GetComponent<SpriteRenderer>().flipX = true;
             playerLegRight.GetComponent<SpriteRenderer>().flipX = true;
+            weapon.GetComponent<SpriteRenderer>().flipY = true;
         }
         else
         {
@@ -110,6 +113,7 @@ public class PlayerGeneral : MonoBehaviour
             playerBody.GetComponent<SpriteRenderer>().flipX = false;
             playerLegLeft.GetComponent<SpriteRenderer>().flipX = false;
             playerLegRight.GetComponent<SpriteRenderer>().flipX = false;
+            weapon.GetComponent<SpriteRenderer>().flipY = false;
         }
     }
 
