@@ -21,6 +21,8 @@ public class PlayerGeneral : MonoBehaviour
 
     //Player References
     private PlayerInput playerControls;
+    private Player1LootDrops player1Loot;
+    private Player2LootDrops player2Loot; 
 
     //Weapon References
     private WeaponShoot weaponRotation;
@@ -39,6 +41,46 @@ public class PlayerGeneral : MonoBehaviour
     private Text player1Text;
     private Text player2Text;
 
+    //Loot Tables
+    public int[] defaultTable =
+    {
+        25,
+        22,
+        16,
+        12,
+        8,
+        7,
+        4,
+        3,
+        2
+    };
+
+    public int[] DDATable =
+    {
+        2, //Health Drop 
+        3, //Shotgun Laser 
+        4, //Assault Rifle 
+        7, //Plasma Sniper 
+        9, //Assaul Laser 
+        12, //Plasma Machine Gun 
+        16, //Flamethrower 
+        22, //Electric Gun 
+        25 //Rocket Launcher 
+    };
+
+    public int[] HealthTable =
+    {
+        45, //Health Drop 
+        15, //Shotgun Laser 
+        10, //Assault Rifle 
+        8, //Plasma Sniper 
+        7, //Assaul Laser 
+        6, //Plasma Machine Gun 
+        4, //Flamethrower 
+        3, //Electric Gun 
+        2 //Rocket Launcher 
+    };
+
 
 
     // Start is called before the first frame update
@@ -51,16 +93,31 @@ public class PlayerGeneral : MonoBehaviour
         player1Spawn = GameObject.Find("Player1Spawn").GetComponent<Transform>();
         player2Spawn = GameObject.Find("Player2Spawn").GetComponent<Transform>();
 
+        
+       
         health = maxHealth;
-
-
     }
 
-    
+    private void Start()
+    {
+        if (playerID == 1)
+        {
+            player1Loot = gameObject.GetComponent<Player1LootDrops>();
+        }
+
+        if (playerID == 2)
+        {
+            player2Loot = gameObject.GetComponent<Player2LootDrops>();
+        }
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
+        DDA();
+
         
         //check which player died to calculate score.
         if(health <= 0)
@@ -151,5 +208,41 @@ public class PlayerGeneral : MonoBehaviour
             gameObject.transform.position = player2Spawn.position;
             this.health = maxHealth;
         }
+    }
+
+    void DDA()
+    {
+
+        if (player1Score > player2Score + 5)
+        {
+            DDAEnableP2();
+            Debug.Log("Player2 DDA Enabled");
+        }
+
+        if (player2Score > player1Score + 5)
+        {
+            DDAEnableP1();
+            Debug.Log("Player1 DDA Enabled");
+        }
+
+        if (health < 30 && playerID == 1)
+        {
+            player1Loot.lootTable = HealthTable;
+        }
+
+        if (health < 30 && playerID == 2)
+        {
+            player2Loot.lootTable = HealthTable;
+        }
+    }
+
+    void DDAEnableP1()
+    {
+        player1Loot.lootTable = DDATable;
+    }
+
+    void DDAEnableP2()
+    {
+        player2Loot.lootTable = DDATable;
     }
 }

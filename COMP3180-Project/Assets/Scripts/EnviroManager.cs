@@ -17,7 +17,6 @@ public class EnviroManager : MonoBehaviour
         Instantiate(spawnObject, spawnPoints[1].position, Quaternion.identity);
         Instantiate(spawnObject, spawnPoints[9].position, Quaternion.identity);
         Instantiate(spawnObject, spawnPoints[6].position, Quaternion.identity);
-        Debug.Log(crateCount);
     }
 
     // Update is called once per frame
