@@ -7,6 +7,7 @@ public class crateControl : MonoBehaviour
 {
 
     //
+    [SerializeField]
     private EnviroManager crateC;
 
     //Drop logic
@@ -47,6 +48,8 @@ public class crateControl : MonoBehaviour
         playerOneLoot = playerOne.GetComponent<Player1LootDrops>();
 
         playerTwoLoot = playerTwo.GetComponent<Player2LootDrops>();
+
+        crateC = GameObject.Find("CrateManager").GetComponent<EnviroManager>();
     }
 
     void Update()
@@ -80,7 +83,6 @@ public class crateControl : MonoBehaviour
             }
 
             isOpen = true;
-            crateC.crateCount--;
         }
         isOpen = false;
     }
@@ -90,6 +92,8 @@ public class crateControl : MonoBehaviour
         //Everything to do when the crate is opened
         spriteRenderer.sprite = openSprite;
         PlayerOneDrop();
+        crateC.crateCount--;
+        crateC.crateSpawn();
     }
 
     void CrateOpenP2()
@@ -97,6 +101,8 @@ public class crateControl : MonoBehaviour
         //Everything to do when the crate is opened
         spriteRenderer.sprite = openSprite;
         PlayerTwoDrop();
+        crateC.crateCount--;
+        crateC.crateSpawn();
     }
 
     private void PlayerOneDrop()

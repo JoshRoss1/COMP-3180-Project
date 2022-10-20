@@ -109,10 +109,10 @@ MonoBehaviour:
   - {fileID: 9075845329650152550, guid: f03c8c333c802764da8564cbf61e8005, type: 3}
   - {fileID: 6308282674883831165, guid: 0fa11df14239ec941a783df212c2da62, type: 3}
   - {fileID: 3531502697542614642, guid: bbf306baccde1ee4dab13f8926b8ee18, type: 3}
-  playerOne: {fileID: 3004667135388049316, guid: be06f8a2f62cf474cb4908ee386e96f1, type: 3}
+  playerOne: {fileID: 2217531678849580423, guid: 76685cb76769d4a45b1a6912f91c50f5, type: 3}
   playerOneTotal: 0
   playerOneRandomNumber: 0
-  playerTwo: {fileID: 4857138049200513587, guid: 867de0f8f7a7d1648a224cb10e0f18df, type: 3}
+  playerTwo: {fileID: 4950135881223111759, guid: e1d8ea3d5b31c19459486504b229fcc5, type: 3}
   playerTwoTotal: 0
   playerTwoRandomNumber: 0
   spriteRenderer: {fileID: 4537551182949971325}

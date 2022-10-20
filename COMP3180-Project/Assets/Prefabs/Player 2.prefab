@@ -901,7 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  playerID: 1
+  playerID: 2
   playerHead: {fileID: 4950135880279775187}
   playerBody: {fileID: 4950135881035768826}
   playerLegLeft: {fileID: 4950135880423497923}
