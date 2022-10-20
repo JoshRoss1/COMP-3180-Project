@@ -19,6 +19,9 @@ public class Bullet : MonoBehaviour
             case "Wall":
                 Destroy(gameObject);
                 break;
+            case "Obstacle":
+                Destroy(gameObject);
+                break;
             case "Player":
                 Destroy(gameObject);
                 collision.gameObject.GetComponent<PlayerGeneral>().health -= damage;

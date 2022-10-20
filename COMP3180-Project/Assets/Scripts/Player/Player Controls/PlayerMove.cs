@@ -6,7 +6,9 @@ using UnityEngine.InputSystem;
 public class PlayerMove : MonoBehaviour
 {
     Vector2 i_movement;
-    float moveSpeed = 10f;
+    
+    [SerializeField]
+    private float moveSpeed = 2f;
 
     // Update is called once per frame
     void Update()
