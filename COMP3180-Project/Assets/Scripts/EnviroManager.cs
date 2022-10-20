@@ -23,10 +23,10 @@ public class EnviroManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    void crateSpawn()
+    public void crateSpawn()
     {
         if (crateCount < 3)
         {
