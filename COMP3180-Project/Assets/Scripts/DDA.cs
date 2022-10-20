@@ -4,10 +4,22 @@ using UnityEngine;
 
 public class DDA : MonoBehaviour
 {
-    public PlayerGeneral player1;
-    public PlayerGeneral player2;
+    public PlayerGeneral player;
     public Player1LootDrops player1loot;
     public Player2LootDrops player2loot;
+
+    public int[] defaultTable =
+    {
+        25,
+        22,
+        16,
+        12,
+        8,
+        7,
+        4,
+        3,
+        2
+    };
 
     public int[] DDATable =
     {
@@ -38,32 +50,39 @@ public class DDA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (player1.player1score > player2.player2score + 5)
-        //{
-        //    DDAEnableP2();
-        //    Debug.Log("Player2 DDA Enabled");
-        //}
 
-        //if (player2.player2score > player1.player1score + 5)
-        //{
-        //    DDAEnableP1();
-        //    Debug.Log("Player1 DDA Enabled");
-        //}
-
-        if (player1.health < 30)
+        if (player.player1Score > player.player2Score + 5)
         {
-            player1loot.lootTable = HealthTable;
+            DDAEnableP2();
+            Debug.Log("Player2 DDA Enabled");
         }
 
-        if (player2.health < 30)
+        if (player.player2Score > player.player1Score + 5)
+        {
+            DDAEnableP1();
+            Debug.Log("Player1 DDA Enabled");
+        }
+
+        if (player.health < 30)
+        {
+            player1loot.lootTable = HealthTable;
+        } else
+        {
+            player1loot.lootTable = defaultTable;
+        }
+
+        if (player.health < 30)
         {
             player2loot.lootTable = HealthTable;
+        } else
+        {
+            player2loot.lootTable = defaultTable;
         }
     }
 

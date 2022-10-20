@@ -32,8 +32,10 @@ public class PlayerGeneral : MonoBehaviour
     public GameObject playerLegRight;
 
     //Text References
-    private int player1Score = 0;
-    private int player2Score = 0;
+    [HideInInspector]
+    public int player1Score = 0;
+    [HideInInspector]
+    public int player2Score = 0;
     private Text player1Text;
     private Text player2Text;
 
