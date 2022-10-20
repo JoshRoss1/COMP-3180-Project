@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 67258506}
   m_Layer: 0
-  m_Name: Player 2 Spawn
+  m_Name: Player2Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4628,7 +4628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571325505}
   m_Layer: 0
-  m_Name: Player 1 Spawn
+  m_Name: Player1Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

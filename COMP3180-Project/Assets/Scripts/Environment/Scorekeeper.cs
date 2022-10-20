@@ -27,16 +27,6 @@ public class Scorekeeper : MonoBehaviour
 
     void scoreUpdate()
     {
-        if (pg.player1died)
-        {
-            currentscorep2++;
-            player2text.text = currentscorep2.ToString();
-        }
-
-        if (pg2.player2died)
-        {
-            currentscorep1++;
-            player1text.text = currentscorep1.ToString();
-        }
+        
     }
 }

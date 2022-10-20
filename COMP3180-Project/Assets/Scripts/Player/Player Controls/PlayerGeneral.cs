@@ -3,11 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerGeneral : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 0f;
+    public float maxHealth = 100f;
     public int playerID;
+
+    //Spawn Point References
+    private Transform player1Spawn;
+    private Transform player2Spawn;
 
     //Interactables
     private HealthDrop healthDrop;
@@ -25,19 +31,30 @@ public class PlayerGeneral : MonoBehaviour
     public GameObject playerLegLeft;
     public GameObject playerLegRight;
 
+    //Text References
+    private int player1Score = 0;
+    private int player2Score = 0;
+    private Text player1Text;
+    private Text player2Text;
+
 
 
     // Start is called before the first frame update
     void Awake()
     {
         playerControls = GetComponent<PlayerInput>();
-        
+        player1Text = GameObject.Find("Player1Score").GetComponent<Text>();
+        player2Text = GameObject.Find("Player2Score").GetComponent<Text>();
 
-        
+        player1Spawn = GameObject.Find("Player1Spawn").GetComponent<Transform>();
+        player2Spawn = GameObject.Find("Player2Spawn").GetComponent<Transform>();
+
+        health = maxHealth;
+
+
     }
 
-    public bool player1died;
-    public bool player2died;
+    
 
     // Update is called once per frame
     void Update()
@@ -46,19 +63,21 @@ public class PlayerGeneral : MonoBehaviour
         //check which player died to calculate score.
         if(health <= 0)
         {
-            Destroy(gameObject);
-            if (gameObject.tag == "Player1")
+            
+            if (playerID == 1)
             {
-                player1died = true;
+                Debug.Log("Player 1 Died");
+                player2Score++;
+                player2Text.text = player2Score.ToString();
+                Respawn(1);
             }
-            if (gameObject.tag == "Player2")
+            if (playerID == 2)
             {
-                player2died = true;
+                player1Score++;
+                player1Text.text = player1Score.ToString();
+                Respawn(2);
             }
         }
-
-        player1died = false;
-        player2died = false;
 
         //Set up Sprite Flip
         weaponRotation = GameObject.Find("Weapon").GetComponentInChildren<WeaponShoot>();
@@ -86,7 +105,7 @@ public class PlayerGeneral : MonoBehaviour
     void Heal(PlayerGeneral playerStats)
     {
         Debug.Log("Working");
-        if ((playerStats.health + healthDrop.healAmount) <= 100)
+        if ((playerStats.health + healthDrop.healAmount) <= maxHealth)
         {
             playerStats.health += healthDrop.healAmount;
             Destroy(healthDrop.gameObject);
@@ -117,4 +136,18 @@ public class PlayerGeneral : MonoBehaviour
         }
     }
 
+    void Respawn(int playerID)
+    {
+        if(playerID == 1)
+        {
+            gameObject.transform.position = player1Spawn.position;
+            this.health = maxHealth;
+        }
+
+        if(playerID == 2)
+        {
+            gameObject.transform.position = player2Spawn.position;
+            this.health = maxHealth;
+        }
+    }
 }
