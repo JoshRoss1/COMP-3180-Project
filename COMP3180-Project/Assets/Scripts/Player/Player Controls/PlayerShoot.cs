@@ -44,7 +44,6 @@ public class PlayerShoot : MonoBehaviour
         firingPoint = gameObject.transform.GetChild(0).gameObject; //Update Projection Point
         //playerControls = new PlayerInput transform.root.gameObject.GetComponent<PlayerInput>();
         
-        Debug.Log("Player Controls attached to Player 2's gun is: " + playerControls.gameObject.name);
 
 
     }

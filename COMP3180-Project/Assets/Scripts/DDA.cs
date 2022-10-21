@@ -57,16 +57,18 @@ public class DDA : MonoBehaviour
     void Update()
     {
 
+        Debug.Log("Player 1 current loot table: " + player1loot.lootTable);
+        Debug.Log("Player 2 current loot table: " + player2loot.lootTable);
+
         if (player.player1Score > player.player2Score + 5)
         {
             DDAEnableP2();
-            Debug.Log("Player2 DDA Enabled");
+            
         }
 
         if (player.player2Score > player.player1Score + 5)
         {
             DDAEnableP1();
-            Debug.Log("Player1 DDA Enabled");
         }
 
         if (player.health < 30)
@@ -89,10 +91,12 @@ public class DDA : MonoBehaviour
     void DDAEnableP1()
     {
         player1loot.lootTable = DDATable;
+        Debug.Log("Player1 DDA Enabled");
     }
 
     void DDAEnableP2()
     {
         player2loot.lootTable = DDATable;
+        Debug.Log("Player2 DDA Enabled");
     }
 }

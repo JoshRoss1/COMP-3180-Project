@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     //Bullet Characteristics
-    public float damage = 1f;
+    public float damage = 0f;
     public float speed = 1f;
 
     private string tag;
@@ -22,9 +22,10 @@ public class Bullet : MonoBehaviour
             case "Obstacle":
                 Destroy(gameObject);
                 break;
-            case "Player":
+            case "Hitbox":
                 Destroy(gameObject);
-                collision.gameObject.GetComponent<PlayerGeneral>().health -= damage;
+                collision.gameObject.GetComponentInParent<PlayerGeneral>().health -= damage;
+                Debug.Log(collision.gameObject.name);
                 break;
             case null:
                 break;

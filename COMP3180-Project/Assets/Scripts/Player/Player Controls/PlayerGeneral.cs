@@ -164,12 +164,18 @@ public class PlayerGeneral : MonoBehaviour
     void Heal(PlayerGeneral playerStats)
     {
         Debug.Log("Working");
-        if ((playerStats.health + healthDrop.healAmount) <= maxHealth)
+        if (playerStats.health < maxHealth)
         {
+            
             playerStats.health += healthDrop.healAmount;
             Destroy(healthDrop.gameObject);
+            
         }
 
+        if (playerStats.health > maxHealth)
+        {
+            playerStats.health = maxHealth;
+        }
     }
 
     void SpriteFlip(Quaternion gunRotation)

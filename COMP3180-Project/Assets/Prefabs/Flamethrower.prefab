@@ -129,6 +129,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beebfe6e22b11114e97baa54c237ae50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 8792831310057691133, guid: 5e6dfca1fc562124a9dafba4808be52b, type: 3}
-  firingPoint: {fileID: 26118645124126564}
+  bulletPrefab: {fileID: 8929925412540449937, guid: b29579234fe42f94c9e5cb03970f2102, type: 3}
   lookPosition: {x: 0, y: 0}
